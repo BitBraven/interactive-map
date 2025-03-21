@@ -43,7 +43,9 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
     let minimumDelayPassed = false;
 
     const hideLoadingScreen = () => {
+        console.log("CAN IT LOAD?")
         if (imageLoaded && minimumDelayPassed) {
+            console.log("WHOOSH");
             let opacity = 1;
             const fadeInterval = setInterval(() => {
                 opacity -= 0.02;
