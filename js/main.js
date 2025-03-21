@@ -22,6 +22,10 @@ const EFFECT_PATH = "effects/";
 
 export function startInteractiveMap() {
     updateRegionSound();
+
+    // Interactive Map Location Tooltips
+    canvas.addEventListener('mousemove', processMouseMove);
+    canvas.addEventListener('mouseleave', processMouseLeave);
 }
 
 // Function to be passed as a callback for redrawing
@@ -126,10 +130,3 @@ document.querySelectorAll('.overlay-list-item').forEach(item => {
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault(); // Prevents the right click context menu from showing
 });
-
-// =================================
-// Interactive Map Location Tooltips
-// =================================
-
-canvas.addEventListener('mousemove', processMouseMove);
-canvas.addEventListener('mouseleave', processMouseLeave);
