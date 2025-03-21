@@ -1,0 +1,54 @@
+.nav-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 10px 10px 10px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    /* For Safari and older browsers */
+}
+
+.nav-bar-header {
+    position: fixed;
+    bottom: 70px;
+    left: calc(50% - (20% / 2) - 10px);
+    z-index: 100;
+    display: block;
+    width: auto;
+    padding: 5px 20px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-family: 'Modesto';
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+    overflow: visible;
+}
+
+.nav-bar button {
+    position: relative;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+.nav-bar button img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-bar button:focus {
+    box-shadow: 0 0 0 2px rgb(175, 175, 175);
+}
