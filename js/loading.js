@@ -77,7 +77,7 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
             ellipsisCounter = 1;
         }
     };
-
+console.log("..........");
     // Start the ellipsis animation
     ellipsisInterval = setInterval(updateEllipsis, 500);
 
@@ -86,9 +86,10 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
         drawWallpaperCallback();
         hideLoadingScreen();
     };
-
+    console.log("TEST");
     setTimeout(() => {
         minimumDelayPassed = true;
         hideLoadingScreen();
+        console.log("RAPIDFIRE");
     }, 3000);
 }
