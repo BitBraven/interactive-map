@@ -44,7 +44,7 @@
 }
 
 #loading-tip-text {
-    font-size: clamp(1rem, 1.5vw, 1.8rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
     font-weight: bold;
     font-family: 'Modesto';
     margin-top: 2vh;
