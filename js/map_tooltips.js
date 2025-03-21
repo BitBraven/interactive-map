@@ -16,6 +16,7 @@ tooltip.classList.add('map-location-tooltip');
 document.body.appendChild(tooltip);
 
 export function processMouseMove(event) {
+    if (!CONFIG_SETTINGS) return;
     const mousePos = getRelativeCoordinates(event, canvas);
     let foundLocation = null;
 
