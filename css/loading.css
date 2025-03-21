@@ -16,8 +16,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vmin;
-    height: 50vmin;
+    width: 55vmin;
+    height: 55vmin;
     min-width: 250px;
     min-height: 250px;
     aspect-ratio: 1;
@@ -44,7 +44,7 @@
 }
 
 #loading-tip-text {
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     font-weight: bold;
     font-family: 'Modesto';
     margin-top: 2vh;
