@@ -1,0 +1,2 @@
+config.json merge=ours
+assets/user/** merge=ours
