@@ -123,7 +123,7 @@ let lastRegionSoundUpdate = 0;
 export function tryUpdateRegionSound() {
     const now = performance.now();
     if (now - lastRegionSoundUpdate >= 1000) {
-        updateRegionSound(scale, offsetX, offsetY);
+        updateRegionSound();
         lastRegionSoundUpdate = now;
     }
 }

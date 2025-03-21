@@ -39,48 +39,56 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
         "Your personalized map is materializing",
     ];
 
-    if (loadingScreen && loadingContent && loadingTipText) {
-        wallpaper.onload = () => {
-            drawWallpaperCallback();
+    let imageLoaded = false;
+    let minimumDelayPassed = false;
 
-            const randomIndex = Math.floor(Math.random() * loadingMessages.length);
-            let currentLoadingText = loadingMessages[randomIndex];
-            let ellipsisCounter = 0;
-            let ellipsisInterval;
-            loadingTipText.textContent = currentLoadingText
+    const hideLoadingScreen = () => {
+        if (imageLoaded && minimumDelayPassed) {
+            let opacity = 1;
+            const fadeInterval = setInterval(() => {
+                opacity -= 0.02;
+                loadingScreen.style.opacity = opacity;
+                loadingContent.style.opacity = opacity;
 
-            // Function to update the ellipsis
-            const dots = ["", ".", "..", "..."];
-            const updateEllipsis = () => {
-                loadingTipText.textContent = currentLoadingText + dots[ellipsisCounter];
-                ellipsisCounter = (ellipsisCounter + 1) % 4;
-                if (ellipsisCounter === 0) {
-                    ellipsisCounter = 1;
+                if (opacity <= -0.2) {
+                    clearInterval(fadeInterval);
+                    loadingScreen.style.display = 'none';
+                    loadingContent.style.display = 'none';
+                    startInteractiveMap();
+                    requestAnimationFrame(animationLoop);
+                    setTimeout(startHeaderAnimation, 400);
                 }
-            };
+            }, 20);
+        }
+    };
 
-            // Start the ellipsis animation
-            ellipsisInterval = setInterval(updateEllipsis, 500);
+    const randomIndex = Math.floor(Math.random() * loadingMessages.length);
+    let currentLoadingText = loadingMessages[randomIndex];
+    let ellipsisCounter = 0;
+    let ellipsisInterval;
+    loadingTipText.textContent = currentLoadingText
 
-            setTimeout(() => {
-                let opacity = 1;
-                const fadeInterval = setInterval(() => {
-                    opacity -= 0.02;
-                    loadingScreen.style.opacity = opacity;
-                    loadingContent.style.opacity = opacity;
+    // Function to update the ellipsis
+    const dots = ["", ".", "..", "..."];
+    const updateEllipsis = () => {
+        loadingTipText.textContent = currentLoadingText + dots[ellipsisCounter];
+        ellipsisCounter = (ellipsisCounter + 1) % 4;
+        if (ellipsisCounter === 0) {
+            ellipsisCounter = 1;
+        }
+    };
 
-                    if (opacity <= -0.2) {
-                        clearInterval(fadeInterval);
-                        clearInterval(ellipsisInterval);
-                        loadingScreen.style.display = 'none';
-                        loadingContent.style.display = 'none';
-                        startInteractiveMap();
-                        requestAnimationFrame(animationLoop);
-                        setTimeout(startHeaderAnimation, 400);
-                    }
-                }, 20);
+    // Start the ellipsis animation
+    ellipsisInterval = setInterval(updateEllipsis, 500);
 
-            }, 3000);
-        };
-    }
+    wallpaper.onload = () => {
+        imageLoaded = true;
+        drawWallpaperCallback();
+        hideLoadingScreen();
+    };
+
+    setTimeout(() => {
+        minimumDelayPassed = true;
+        hideLoadingScreen();
+    }, 3000);
 }

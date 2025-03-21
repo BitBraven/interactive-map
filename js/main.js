@@ -21,7 +21,7 @@ const ctx = canvas.getContext('2d');
 const EFFECT_PATH = "effects/";
 
 export function startInteractiveMap() {
-    updateRegionSound(1, 1, 0);
+    updateRegionSound();
 }
 
 // Function to be passed as a callback for redrawing

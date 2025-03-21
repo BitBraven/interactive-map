@@ -3,15 +3,16 @@ import {
     AMBIANCE_PATH,
     AMBIANCE_SLIDER_ID,
     AMBIANCE_MAX_VOLUME as configAmbianceMaxVolume,
+    CONFIG_SETTINGS,
     CROSSFADE_DURATION,
     MUSIC_PATH,
     MUSIC_SLIDER_ID,
     MUSIC_MAX_VOLUME as configMusicMaxVolume,
     REGION_PATH,
-    REFERENCE_WIDTH,
-    REFERENCE_HEIGHT,
     REGION_MUSIC_DATA
 } from './config.js';
+
+import { currentWallpaperMatrix } from './canvas.js';
 
 // ==============================
 // Audio Configuration
@@ -50,29 +51,30 @@ document.getElementById(MUSIC_SLIDER_ID).addEventListener("input", e => {
     musicAudio.volume = MUSIC_MAX_VOLUME;
 });
 
-export function updateRegionSound(scale, offsetX, offsetY) {
+export function updateRegionSound() {
     if (!REGION_MUSIC_DATA) return;
 
-    const currentWidth = window.innerWidth;
-    const currentHeight = window.innerHeight;
+    // Get view center coordinates
+    const viewportCenterX = window.innerWidth / 2;
+    const viewportCenterY = window.innerHeight / 2;
 
-    // Calculate the center of the view on the stretched/scaled map
-    const xOnStretched = (currentWidth / 2 - offsetX) / scale;
-    const yOnStretched = (currentHeight / 2 - offsetY) / scale;
+    // Transform view center coordinates to natural image space using matrix
+    const point = new DOMPoint(viewportCenterX, viewportCenterY);
+    const invertedMatrix = currentWallpaperMatrix.inverse();
+    const transformedPoint = invertedMatrix.transformPoint(point);
 
-    // Normalize the map center coordinates to the reference resolution
-    const normalizedX = (xOnStretched / currentWidth) * REFERENCE_WIDTH;
-    const normalizedY = (yOnStretched / currentHeight) * REFERENCE_HEIGHT;
+    const naturalX = transformedPoint.x;
+    const naturalY = transformedPoint.y;
 
-    const mapCenter = {
-        x: normalizedX,
-        y: normalizedY
-    };
+    if (CONFIG_SETTINGS["TEST-TrackMapCenter"]) {
+        console.log("Map center in natural coordinates:", naturalX, naturalY);
+    }
 
-    const regionFound = REGION_MUSIC_DATA.find(region =>
-        mapCenter.x >= region["area"]["x"]["min"] && mapCenter.x <= region["area"]["x"]["max"] &&
-        mapCenter.y >= region["area"]["y"]["min"] && mapCenter.y <= region["area"]["y"]["max"]
-    );
+    const regionFound = REGION_MUSIC_DATA.find(region => {
+        const { x: { min: xMin, max: xMax }, y: { min: yMin, max: yMax } } = region.area;
+        return naturalX >= xMin && naturalX <= xMax &&
+            naturalY >= yMin && naturalY <= yMax;
+    });
 
     if (regionFound) {
         if (activeSoundRegion !== regionFound) {
