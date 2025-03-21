@@ -6,10 +6,10 @@
         "Enable Sound Panel": true,
         "Enable Weather Toggle": true,
         "Enable Overlays": true,
-        "Welcome Header": "WRITE A HEADER HERE!",
+        "Welcome Header": "WELCOME TO HAVEN",
         "Zoom": {
             "Min": 0.8,
-            "Max": 5
+            "Max": 30
         },
         "Overlays": {
             "Settlements": true,
@@ -31,16 +31,16 @@
     },
     "Map Tooltips": [
         {
-            "name": "Oaklen (Village)",
-            "description": "Oaklen is conveniently placed on the other side of the Blue Bridge, and as such acts as a local hub for the Narminian population.",
+            "name": "Riven (Capital City)",
+            "description": "Capital city and Jewel of Narmin, ships of all corners of the world dock in its bustling harbour. The city is a thriving hub of trade and culture.",
             "area": {
                 "x": {
-                    "min": 2961,
-                    "max": 3338
+                    "min": 395,
+                    "max": 415
                 },
                 "y": {
-                    "min": 2519,
-                    "max": 2943
+                    "min": 221,
+                    "max": 247
                 }
             }
         },
@@ -49,40 +49,26 @@
             "description": "Humble Pewterden is the second largest settlement in Narmin, and a safe port for the occasional stragglers and ships passing through Riven.",
             "area": {
                 "x": {
-                    "min": 1034,
-                    "max": 1488
+                    "min": 392,
+                    "max": 415
                 },
                 "y": {
-                    "min": 3025,
-                    "max": 3474
+                    "min": 285,
+                    "max": 308
                 }
             }
         },
         {
-            "name": "Riven (Capital City)",
-            "description": "Capital city and Jewel of Narmin, ships of all corners of the world dock in its bustling harbour. The city is a thriving hub of trade and culture.",
+            "name": "Oaklen (Village)",
+            "description": "Oaklen is conveniently placed on the other side of the Blue Bridge, and as such acts as a local hub for the Narminian population.",
             "area": {
                 "x": {
-                    "min": 1099,
-                    "max": 1498
+                    "min": 483,
+                    "max": 500
                 },
                 "y": {
-                    "min": 1675,
-                    "max": 2182
-                }
-            }
-        },
-        {
-            "name": "Dartwood Estate",
-            "description": "Owned by the Dartwood Dynasty, known for their hospitality. It has become a popular resting spot for those that are venturing towards the Verdant Spire.",
-            "area": {
-                "x": {
-                    "min": 2672,
-                    "max": 2885
-                },
-                "y": {
-                    "min": 1681,
-                    "max": 2056
+                    "min": 262,
+                    "max": 283
                 }
             }
         },
@@ -91,26 +77,26 @@
             "description": "One of the oldest silver mines in all of Haven, Silvervein Hollow has been a large producer of income for the Kingdom for thousands of years.",
             "area": {
                 "x": {
-                    "min": 1401,
-                    "max": 1758
+                    "min": 407,
+                    "max": 427
                 },
                 "y": {
-                    "min": 2616,
-                    "max": 2986
+                    "min": 266,
+                    "max": 284
                 }
             }
         },
         {
-            "name": "Spiresong Ruins",
-            "description": "Some say these ruins used to be a sprawling town, before a calamity befell on it. Others say it was home to the Verdant Spire before it shifted places. Nowadays it is known for its namesake song.",
+            "name": "Dartwood Estate",
+            "description": "Owned by the Dartwood Dynasty, known for their hospitality. It has become a popular resting spot for those that are venturing towards the Verdant Spire.",
             "area": {
                 "x": {
-                    "min": 3082,
-                    "max": 3458
+                    "min": 468,
+                    "max": 482
                 },
                 "y": {
-                    "min": 3296,
-                    "max": 3608
+                    "min": 224,
+                    "max": 243
                 }
             }
         },
@@ -119,125 +105,1173 @@
             "description": "This Spire is known for the massive tree roots that surround and protect it, and is home to the Aspect of Nature.",
             "area": {
                 "x": {
-                    "min": 3510,
-                    "max": 3715
+                    "min": 504,
+                    "max": 520
                 },
                 "y": {
-                    "min": 1100,
-                    "max": 1510
+                    "min": 194,
+                    "max": 215
                 }
             }
         },
         {
-            "name": "Beaverduff Woods",
-            "description": "This peaceful forest is home to a vast number of beavers, who have live peacefully by the shores of Raygan Channel.",
+            "name": "Spiresong Ruins",
+            "description": "Some say these ruins used to be a sprawling town, before a calamity befell on it. Others say it was home to the Verdant Spire before it shifted places. Nowadays it is known for its namesake song.",
             "area": {
                 "x": {
-                    "min": 2912,
-                    "max": 3971
+                    "min": 489,
+                    "max": 507
                 },
                 "y": {
-                    "min": 2164,
-                    "max": 2514
+                    "min": 295,
+                    "max": 314
                 }
             }
         },
         {
             "name": "Eaglenest Canopy",
-            "description": "This canopy is known for being the natural habitat of the proud Narminian Eagle.",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
             "area": {
                 "x": {
-                    "min": 812,
-                    "max": 1821
+                    "min": 382,
+                    "max": 427
                 },
                 "y": {
-                    "min": 1370,
-                    "max": 1567
-                }
-            }
-        },
-        {
-            "name": "Raygan Channel",
-            "description": "It is said that Raygan Channel is an unnatural occurrence, created by powerful wizards. Likely the same ones that made the forest that surrounds it in the North.",
-            "area": {
-                "x": {
-                    "min": 3047,
-                    "max": 4523
-                },
-                "y": {
-                    "min": 1827,
-                    "max": 2153
-                }
-            }
-        },
-        {
-            "name": "Saphire Falls",
-            "description": "Beauty is in the eyes of the beholder. But sometimes, it is actually at the end of a waterfall, in the form of a beautiful, expensive blue gem.",
-            "area": {
-                "x": {
-                    "min": 616,
-                    "max": 1048
-                },
-                "y": {
-                    "min": 1944,
-                    "max": 2331
-                }
-            }
-        },
-        {
-            "name": "Spiral Forest",
-            "description": "This forest, also known as 'The Green Maze', is a massive natural formation of trees that would turn even the sanest person mad if they dared trying to reach its centre.",
-            "area": {
-                "x": {
-                    "min": 2529,
-                    "max": 3334
-                },
-                "y": {
-                    "min": 1047,
-                    "max": 1304
+                    "min": 198,
+                    "max": 218
                 }
             }
         },
         {
             "name": "Silverleaf Forest",
-            "description": "It is said that this forest was once inhabited by dancing, silvery Fey. Now all that's left are the silver leaves occasionally found throughout it.",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
             "area": {
                 "x": {
-                    "min": 512,
-                    "max": 1131
+                    "min": 371,
+                    "max": 398
                 },
                 "y": {
-                    "min": 2636,
-                    "max": 2979
+                    "min": 257,
+                    "max": 304
                 }
             }
         },
         {
             "name": "Tarn River",
-            "description": "This great river flows directly from the ocean towards the Capital city of Riven, allowing free flow of commerce and fishing. It also serves as a natural protective barrier.",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
             "area": {
                 "x": {
-                    "min": 1094,
-                    "max": 2052
+                    "min": 383,
+                    "max": 445
                 },
                 "y": {
-                    "min": 2204,
-                    "max": 2403
+                    "min": 245,
+                    "max": 255
+                }
+            }
+        },
+        {
+            "name": "Saphire Falls",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 372,
+                    "max": 392
+                },
+                "y": {
+                    "min": 233,
+                    "max": 253
+                }
+            }
+        },
+        {
+            "name": "Spiral Forest",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 459,
+                    "max": 500
+                },
+                "y": {
+                    "min": 192,
+                    "max": 215
+                }
+            }
+        },
+        {
+            "name": "Raygan Channel",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 486,
+                    "max": 560
+                },
+                "y": {
+                    "min": 228,
+                    "max": 244
+                }
+            }
+        },
+        {
+            "name": "Beaverduff Woods",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 481,
+                    "max": 530
+                },
+                "y": {
+                    "min": 242,
+                    "max": 263
+                }
+            }
+        },
+        {
+            "name": "Celebdir (Capital)",
+            "description": "The Capital of Elvenkind, Celebdir is a massive city situated over the large mountains of Erynlas. It is home to the Dominion, an isolationist and powerful regime that controls the lands with an iron fist.",
+            "area": {
+                "x": {
+                    "min": 131,
+                    "max": 153
+                },
+                "y": {
+                    "min": 128,
+                    "max": 168
+                }
+            }
+        },
+        {
+            "name": "Ninthal (Village)",
+            "description": "Founded as a resting place in between Celebdir and Faelar, it is a popular hub for relaxation and spiritual fulfilment.",
+            "area": {
+                "x": {
+                    "min": 183,
+                    "max": 200
+                },
+                "y": {
+                    "min": 133,
+                    "max": 157
+                }
+            }
+        },
+        {
+            "name": "Eldralyn (Town)",
+            "description": "The great Eldralyn serves as the entry point of Erynlas. It is said that this is the only Dominion town that tolerates outsiders. But just barely.",
+            "area": {
+                "x": {
+                    "min": 184,
+                    "max": 208
+                },
+                "y": {
+                    "min": 220,
+                    "max": 247
+                }
+            }
+        },
+        {
+            "name": "Faelar (Town)",
+            "description": "Derives its name from the mysterious Fae creatures that inhabit its surroundings. It is said to be a place of mystique and magic.",
+            "area": {
+                "x": {
+                    "min": 247,
+                    "max": 270
+                },
+                "y": {
+                    "min": 92,
+                    "max": 116
+                }
+            }
+        },
+        {
+            "name": "Shengdu (Capital)",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 119,
+                    "max": 145
+                },
+                "y": {
+                    "min": 356,
+                    "max": 387
+                }
+            }
+        },
+        {
+            "name": "Huicheng (City)",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 91,
+                    "max": 108
+                },
+                "y": {
+                    "min": 355,
+                    "max": 371
+                }
+            }
+        },
+        {
+            "name": "Linhua (Village)",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 113,
+                    "max": 125
+                },
+                "y": {
+                    "min": 394,
+                    "max": 407
+                }
+            }
+        },
+        {
+            "name": "Jinghai (Town)",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 141,
+                    "max": 156
+                },
+                "y": {
+                    "min": 390,
+                    "max": 403
+                }
+            }
+        },
+        {
+            "name": "Longjing (City)",
+            "description": "WRITE_A_DESCRIPTION_HERE_SO_THE_USER_KNOWS_WHAT_THEY_ARE_HOVERING_AT_YOU_SILLY",
+            "area": {
+                "x": {
+                    "min": 133,
+                    "max": 151
+                },
+                "y": {
+                    "min": 406,
+                    "max": 421
+                }
+            }
+        },
+        {
+            "name": "Ramadeen (Town)",
+            "description": "A small town on the far edge of Meridia. Not much is known about it, but it is nothing short of a miracle that it managed to grow in such a distant, rough environment.",
+            "area": {
+                "x": {
+                    "min": 42,
+                    "max": 62
+                },
+                "y": {
+                    "min": 886,
+                    "max": 905
+                }
+            }
+        },
+        {
+            "name": "Aridon (Village)",
+            "description": "This village is known to be highly isolated from Meridian society, and operates largely on its own. It is said that it is the ancestral home of the Iron Wolves faction.",
+            "area": {
+                "x": {
+                    "min": 141,
+                    "max": 157
+                },
+                "y": {
+                    "min": 883,
+                    "max": 851
+                }
+            }
+        },
+        {
+            "name": "Jasirah (Town)",
+            "description": "The town sits comfortably in between the Wadi Canopy and Merm River, and has thrived as a local hub, safe from the hazards of the desert landscape surrounding it.",
+            "area": {
+                "x": {
+                    "min": 126,
+                    "max": 149
+                },
+                "y": {
+                    "min": 887,
+                    "max": 909
+                }
+            }
+        },
+        {
+            "name": "Arrakis (City)",
+            "description": "It is said that the city of Arrakis exists only due to the exploits of a mysterious entity known as Dahlgur, who created the sprawling oasis around it. He only requested that it be named after him.",
+            "area": {
+                "x": {
+                    "min": 184,
+                    "max": 202
+                },
+                "y": {
+                    "min": 970,
+                    "max": 993
+                }
+            }
+        },
+        {
+            "name": "Iraduun (Town)",
+            "description": "Home to the Golden Mosque, Iraduun is a beacon of light in Meridia. Quite literally, in fact. It is also the closest settlement to the Ruins of Neptun, and as such is frequently visited by adventurers.",
+            "area": {
+                "x": {
+                    "min": 274,
+                    "max": 299
+                },
+                "y": {
+                    "min": 873,
+                    "max": 902
+                }
+            }
+        },
+        {
+            "name": "Khalideen (Capital)",
+            "description": "Said to be the only metropolis that rivals The Red City. The vast Khalideen is the heart of Meridia, fed by the Sandflare Stream and covered in the shade of the valleys surrounding it.",
+            "area": {
+                "x": {
+                    "min": 348,
+                    "max": 381
+                },
+                "y": {
+                    "min": 965,
+                    "max": 992
+                }
+            }
+        },
+        {
+            "name": "Qadim (Village)",
+            "description": "A small village on the way to Khalideen, it is a common stopping point for adventurers, explorers and mercenaries alike.",
+            "area": {
+                "x": {
+                    "min": 389,
+                    "max": 407
+                },
+                "y": {
+                    "min": 901,
+                    "max": 921
+                }
+            }
+        },
+        {
+            "name": "Lut Gholein (City)",
+            "description": "The Green Jewel of Meridia, Lut Gholein is the thriving Port City of its Empire. Thanks to its success, it manages to operate almost independently, and with heavy tax reliefs.",
+            "area": {
+                "x": {
+                    "min": 439,
+                    "max": 466
+                },
+                "y": {
+                    "min": 864,
+                    "max": 883
+                }
+            }
+        },
+        {
+            "name": "Sandskar (Town)",
+            "description": "The town of Sandskar is particularly relevant to Meridia, having been founded by its messiah, Arael Sunwhisper. It contains several religious artefacts and monuments.",
+            "area": {
+                "x": {
+                    "min": 508,
+                    "max": 530
+                },
+                "y": {
+                    "min": 940,
+                    "max": 966
+                }
+            }
+        },
+        {
+            "name": "Ravenloft (Town)",
+            "description": "Once the Capital of Nocturnia, it was all but abandoned when it ran out of natural resources, and due to monster attacks. Recently, it has began to be resettled as a safe haven, due to fear of the Count's harsh ruling.",
+            "area": {
+                "x": {
+                    "min": 762,
+                    "max": 780
+                },
+                "y": {
+                    "min": 140,
+                    "max": 159
+                }
+            }
+        },
+        {
+            "name": "Citadel Agarta (Village)",
+            "description": "The home of the Count and nerve centre of Nocturnia, Citadel Agartha is a massive gothic castle that looms over the entire island. It is said to be inhabited almost exclusively by monsters.",
+            "area": {
+                "x": {
+                    "min": 787,
+                    "max": 806
+                },
+                "y": {
+                    "min": 185,
+                    "max": 213
+                }
+            }
+        },
+        {
+            "name": "Barovia (Village)",
+            "description": "A small village on the coast, it has been the biggest provider of food in all of Nocturnia, though the region still imports most of its goods from outside.",
+            "area": {
+                "x": {
+                    "min": 758,
+                    "max": 774
+                },
+                "y": {
+                    "min": 212,
+                    "max": 230
+                }
+            }
+        },
+        {
+            "name": "Targoviste (Capital)",
+            "description": "The Capital of Nocturnia, Targoviste is a sprawling city that has adapted to surviving the cold, harsh environment that is Nocturnia. The night is dark and full of terrors.",
+            "area": {
+                "x": {
+                    "min": 830,
+                    "max": 847
+                },
+                "y": {
+                    "min": 220,
+                    "max": 237
+                }
+            }
+        },
+        {
+            "name": "Port Royal (Metropolis)",
+            "description": "The biggest port town in Haven, with a harbour larger than even that of Palmara and Calypso. It is home to the legendary Merchants' Guild, and if rumours are to be believed, the Thieves' Guild as well.",
+            "area": {
+                "x": {
+                    "min": 600,
+                    "max": 630
+                },
+                "y": {
+                    "min": 418,
+                    "max": 442
+                }
+            }
+        },
+        {
+            "name": "Hearthglen (Metropolis)",
+            "description": "Once the Capital of the Kingdom of Hearthbloom, is an ancient stone city, home to various Military and Religious Orders, such as that of the Sisterhood of the Rising Sun. ",
+            "area": {
+                "x": {
+                    "min": 615,
+                    "max": 636
+                },
+                "y": {
+                    "min": 572,
+                    "max": 597
+                }
+            }
+        },
+        {
+            "name": "Vermillion (Town)",
+            "description": "Known for its unique red flowers that grow in the area, making the town famous for producing the finest and most vibrant red dye, crucial for textiles and heraldry.",
+            "area": {
+                "x": {
+                    "min": 594,
+                    "max": 614
+                },
+                "y": {
+                    "min": 632,
+                    "max": 654
+                }
+            }
+        },
+        {
+            "name": "Midenhall Keep",
+            "description": "Rumoured to have once been in the mid point between Meridia and Westmarch, before the continents split up, hence its namesake. These days, the old castle looms over the west coast of Westmarch.",
+            "area": {
+                "x": {
+                    "min": 561,
+                    "max": 583
+                },
+                "y": {
+                    "min": 711,
+                    "max": 732
+                }
+            }
+        },
+        {
+            "name": "Daisyford (Village)",
+            "description": "Known for its beautiful valleys and mixture of white and golden flowers. It is said that both the Daisy and Elderflower originate from the region.",
+            "area": {
+                "x": {
+                    "min": 673,
+                    "max": 689
+                },
+                "y": {
+                    "min": 618,
+                    "max": 638
+                }
+            }
+        },
+        {
+            "name": "Cannock Hold",
+            "description": "Derives its name from the battle of Cannock Hill, where Imperial troops defeated the Orcs in defense of the Red City. It is said the army chased the orcs all the way to where the Hold stands these days.",
+            "area": {
+                "x": {
+                    "min": 660,
+                    "max": 681
+                },
+                "y": {
+                    "min": 651,
+                    "max": 672
+                }
+            }
+        },
+        {
+            "name": "Tantegel (Metropolis)",
+            "description": "The largest fortress in Haven, to the point that it has become a sprawling metropolis, due to its unmatched defenses and tranquility. It used to be the Seat of Power of the ancient Kingdom of Narrowmarch.",
+            "area": {
+                "x": {
+                    "min": 645,
+                    "max": 676
+                },
+                "y": {
+                    "min": 693,
+                    "max": 724
+                }
+            }
+        },
+        {
+            "name": "Endor's Vigil",
+            "description": "Derives its name from the legendary Knight of the same name, Endor. The Knight was the Empire's strongest and most loyal warrior, and was responsible for defeating Meridian incursions several times.",
+            "area": {
+                "x": {
+                    "min": 639,
+                    "max": 660
+                },
+                "y": {
+                    "min": 741,
+                    "max": 763
+                }
+            }
+        },
+        {
+            "name": "Marigold (Village)",
+            "description": "A small village founded across the Sickle Bridge after the Fall of Lavender. A peaceful place, it is known for its beautiful flowers and occasional gold veins.",
+            "area": {
+                "x": {
+                    "min": 696,
+                    "max": 709
+                },
+                "y": {
+                    "min": 592,
+                    "max": 609
+                }
+            }
+        },
+        {
+            "name": "Flatgrove (Village)",
+            "description": "A village bordering the region of Nosgoth. Due to being off the Royal Roads, it has never grown to its full potential.",
+            "area": {
+                "x": {
+                    "min": 743,
+                    "max": 761
+                },
+                "y": {
+                    "min": 470,
+                    "max": 487
+                }
+            }
+        },
+        {
+            "name": "Scarlet Gate",
+            "description": "The first and biggest of the 4 Imperial Gates. The massive keep looms over a large mountain, overlooking the North West entrance to the Red City.",
+            "area": {
+                "x": {
+                    "min": 775,
+                    "max": 794
+                },
+                "y": {
+                    "min": 532,
+                    "max": 556
+                }
+            }
+        },
+        {
+            "name": "Primrose (Town)",
+            "description": "Contrary to what it may seem like, this town is not known for its beautiful fields of flowers like its sibling settlements. In fact, it is quite known for its vast fishing spots, and the Hill Goats.",
+            "area": {
+                "x": {
+                    "min": 755,
+                    "max": 771
+                },
+                "y": {
+                    "min": 636,
+                    "max": 653
+                }
+            }
+        },
+        {
+            "name": "Ariahan Citadel",
+            "description": "The second most populated keep in Westmarch, but still largely behind the first place, Tantegel. It watches over Sickleflow Stream, preventing enemy incursions into Imperial heartlands.",
+            "area": {
+                "x": {
+                    "min": 748,
+                    "max": 769
+                },
+                "y": {
+                    "min": 702,
+                    "max": 723
+                }
+            }
+        },
+        {
+            "name": "Nosgoth (Metropolis)",
+            "description": "Named after the region around it. It is said that the city was built by pilgrims who'd come to visit the Pillars. Over time, Nosgoth became so large it was declared  its own kingdom.",
+            "area": {
+                "x": {
+                    "min": 809,
+                    "max": 830
+                },
+                "y": {
+                    "min": 443,
+                    "max": 468
+                }
+            }
+        },
+        {
+            "name": "The Red City (Capital)",
+            "description": "The largest, most beautiful metropolis in all of Haven, and home to the Third Empire of Westmarch. Or at least that's what Westmarchians will have you believe. The city lays on top of a massive mountain.",
+            "area": {
+                "x": {
+                    "min": 850,
+                    "max": 901
+                },
+                "y": {
+                    "min": 571,
+                    "max": 611
+                }
+            }
+        },
+        {
+            "name": "Barleybrook (City)",
+            "description": "A large city, almost rivaling the once regional Capital, Agria. Known not only for its vast barley fields, but also its stone quarries, the city is a large trading hub.",
+            "area": {
+                "x": {
+                    "min": 885,
+                    "max": 904
+                },
+                "y": {
+                    "min": 700,
+                    "max": 720
+                }
+            }
+        },
+        {
+            "name": "Sistervale (Metropolis)",
+            "description": "This metropolis sits at the end of a labyrinth of hills and mountains. No one knows why it is called that, but everyone knows that any would be invaders will starve before they reach the city.",
+            "area": {
+                "x": {
+                    "min": 915,
+                    "max": 936
+                },
+                "y": {
+                    "min": 478,
+                    "max": 497
+                }
+            }
+        },
+        {
+            "name": "Garnet Gate",
+            "description": "Built upon a large garnet mine, or so the rumours say. Most citizens will tell you it was built by Humankind to watch over the Elven incursion which eventually settled in the nearby lands.",
+            "area": {
+                "x": {
+                    "min": 901,
+                    "max": 922
+                },
+                "y": {
+                    "min": 536,
+                    "max": 554
+                }
+            }
+        },
+        {
+            "name": "Galadrim (Town)",
+            "description": "An Elven town situated East of the Red City. The city derives its name from its leader, Galadriel, a legendary Elf known for her unmatched magical prowess.",
+            "area": {
+                "x": {
+                    "min": 943,
+                    "max": 960
+                },
+                "y": {
+                    "min": 561,
+                    "max": 581
+                }
+            }
+        },
+        {
+            "name": "Crimson Gate",
+            "description": "The most heavily manned of the 4 Imperial Gates, and watches over the South East entrance to the Red City. Most of the stapples that reach the Capital come through its gates.",
+            "area": {
+                "x": {
+                    "min": 956,
+                    "max": 977
+                },
+                "y": {
+                    "min": 638,
+                    "max": 656
+                }
+            }
+        },
+        {
+            "name": "Cloverdale (Village)",
+            "description": "Home to several unique herbs of intriguing properties, though most are attributed to luck and healing. It is said that if one finds a 4 leaf clover, they will be blessed for 10 days.",
+            "area": {
+                "x": {
+                    "min": 965,
+                    "max": 984
+                },
+                "y": {
+                    "min": 711,
+                    "max": 726
+                }
+            }
+        },
+        {
+            "name": "Agria (Metropolis)",
+            "description": "The largest producer of food in all of Haven, supplying not only Westmarch but also Meridia and other towns outside the influence of the two Empires. It was built by the First Empire in 1200.",
+            "area": {
+                "x": {
+                    "min": 981,
+                    "max": 1009
+                },
+                "y": {
+                    "min": 744,
+                    "max": 768
+                }
+            }
+        },
+        {
+            "name": "Kragath (Village)",
+            "description": "The only Orc village still inside the Third Empire's sphere of influence, though that influence is quickly waning due to the ongoing Civil War.",
+            "area": {
+                "x": {
+                    "min": 983,
+                    "max": 1008
+                },
+                "y": {
+                    "min": 406,
+                    "max": 429
+                }
+            }
+        },
+        {
+            "name": "Springfield (Village)",
+            "description": "Known for its vast forests, and, naturally, the Spriggan fey who inhabit them.",
+            "area": {
+                "x": {
+                    "min": 1012,
+                    "max": 1031
+                },
+                "y": {
+                    "min": 679,
+                    "max": 702
+                }
+            }
+        },
+        {
+            "name": "Aerendil (Metropolis)",
+            "description": "The Elven metropolis and Capital in Westmarch. It was settled by Elvenkind before their exodus to Meridia, and stands as a bastion of the Elves to this day.",
+            "area": {
+                "x": {
+                    "min": 1029,
+                    "max": 1051
+                },
+                "y": {
+                    "min": 560,
+                    "max": 583
+                }
+            }
+        },
+        {
+            "name": "Grainport (City)",
+            "description": "Though a large producer of food, this city is mostly known for getting that same food, as well as most of what Westmarch produces, to other lands. The oceans are calmer by Grainport than they are by Agria.",
+            "area": {
+                "x": {
+                    "min": 1043,
+                    "max": 1072
+                },
+                "y": {
+                    "min": 662,
+                    "max": 683
+                }
+            }
+        },
+        {
+            "name": "Khazadun (Town)",
+            "description": "The only known Dwarven settlement outside of Frostheim, Khazadun has remained neutral in the civil war. Many seek its ancient treasures and technology, but few come back unscathed from the perilous canyons surrounding it.",
+            "area": {
+                "x": {
+                    "min": 1106,
+                    "max": 1127
+                },
+                "y": {
+                    "min": 379,
+                    "max": 398
+                }
+            }
+        },
+        {
+            "name": "Thurakmar (Capital)",
+            "description": "The Capital city of the Orcs ever since they first settled in Westmarch. Annexed by the Second Empire, it remained a prosperous settlement, until it was taken over by the violent Nemesis Uprising.",
+            "area": {
+                "x": {
+                    "min": 1170,
+                    "max": 1200
+                },
+                "y": {
+                    "min": 398,
+                    "max": 424
+                }
+            }
+        },
+        {
+            "name": "Vargath (Town)",
+            "description": "A mining and fishing town in the outskirts of Westmarch, it is known for its rich resources and as an important hub of weapons and armour manufacturing.",
+            "area": {
+                "x": {
+                    "min": 1234,
+                    "max": 1259
+                },
+                "y": {
+                    "min": 476,
+                    "max": 498
+                }
+            }
+        },
+        {
+            "name": "Naktul (Town)",
+            "description": "A town found deep in the jungles of Xaloc. Little is known about it, other than that its popularity grew immensely after the Fall of Travincal.",
+            "area": {
+                "x": {
+                    "min": 891,
+                    "max": 910
+                },
+                "y": {
+                    "min": 950,
+                    "max": 972
+                }
+            }
+        },
+        {
+            "name": "Kurast (City)",
+            "description": "Known as the gates of Xaloc. One must already be insane to venture into the Realm of the Jaguar, but doing so without entering through Kurast is no less than suicide.",
+            "area": {
+                "x": {
+                    "min": 936,
+                    "max": 966
+                },
+                "y": {
+                    "min": 898,
+                    "max": 928
+                }
+            }
+        },
+        {
+            "name": "Maztlan (Capital)",
+            "description": "The Capital of Xaloc, found in the heart of its jungles. The only people who can reach it are the natives. It is said that the city is made almost entirely out of gold.",
+            "area": {
+                "x": {
+                    "min": 961,
+                    "max": 998
+                },
+                "y": {
+                    "min": 961,
+                    "max": 998
+                }
+            }
+        },
+        {
+            "name": "Quetza (Town)",
+            "description": "The only resting place in the route between Maztlan and the Jaguar Spire. It is said to be a deeply religious town that adores Sseth, the reptilian god.",
+            "area": {
+                "x": {
+                    "min": 1048,
+                    "max": 1066
+                },
+                "y": {
+                    "min": 996,
+                    "max": 1020
+                }
+            }
+        },
+        {
+            "name": "Seashell Point (Village)",
+            "description": "A peaceful village in the newly united Carzun Republic, famed for its unique shellfish and mollusk trade, a stark contrast to the region's history of piracy and merchant conflict.",
+            "area": {
+                "x": {
+                    "min": 1357,
+                    "max": 1378
+                },
+                "y": {
+                    "min": 207,
+                    "max": 223
+                }
+            }
+        },
+        {
+            "name": "Azure Bay (City)",
+            "description": "A large commercial hub within the recently united Carzun Republic, known for its rich history as a major fishing center. Recently, the city has began to fall behind Tidewater, but it continues to shine.",
+            "area": {
+                "x": {
+                    "min": 1438,
+                    "max": 1463
+                },
+                "y": {
+                    "min": 181,
+                    "max": 208
+                }
+            }
+        },
+        {
+            "name": "Sunport (Town)",
+            "description": "Once a large city, used by Merchants and Pirates alike. Due to its central location, it was the main theatre of several wars, which caused its size to be reduced to a shell of its former self.",
+            "area": {
+                "x": {
+                    "min": 1458,
+                    "max": 1480
+                },
+                "y": {
+                    "min": 314,
+                    "max": 334
+                }
+            }
+        },
+        {
+            "name": "Palmara (Metropolis)",
+            "description": "The largest city in Carzun, contrary to popular belief. A tropical paradise, it is the home of the Sea Merchants Alliance, and the biggest competitor to the Corsairs League' hub, Tidewater.",
+            "area": {
+                "x": {
+                    "min": 1573,
+                    "max": 1605
+                },
+                "y": {
+                    "min": 175,
+                    "max": 204
+                }
+            }
+        },
+        {
+            "name": "Calypso (Capital)",
+            "description": "The Capital city of the newly united Carzun Republic. Rumours say it used to be a safespot used by the Corsairs' League to hide their treasures. After the Truce of 3211, it became the official Capital of Carzun.",
+            "area": {
+                "x": {
+                    "min": 1562,
+                    "max": 1588
+                },
+                "y": {
+                    "min": 240,
+                    "max": 272
+                }
+            }
+        },
+        {
+            "name": "Tidewater (City)",
+            "description": "An ancient city, mysteriously untouched by civilization for thousands of years. Only recently, the Corsairs' League resettled it. The city's vast infrastructure and great spot allowed it to quickly match Azure Bay.",
+            "area": {
+                "x": {
+                    "min": 1593,
+                    "max": 1625
+                },
+                "y": {
+                    "min": 430,
+                    "max": 458
+                }
+            }
+        },
+        {
+            "name": "Eldmegin (City)",
+            "description": "The forge city of Frostheim, renowned for its volcanic forges that produce the most advanced and complex Dwarven engineering.",
+            "area": {
+                "x": {
+                    "min": 1468,
+                    "max": 1491
+                },
+                "y": {
+                    "min": 821,
+                    "max": 848
+                }
+            }
+        },
+        {
+            "name": "Eraborg (Town)",
+            "description": "The mining heart of Frostheim, a town surrounded by rich mineral veins and a lake of lava.",
+            "area": {
+                "x": {
+                    "min": 1590,
+                    "max": 1608
+                },
+                "y": {
+                    "min": 763,
+                    "max": 792
+                }
+            }
+        },
+        {
+            "name": "Smiohjarta (Capital)",
+            "description": "The Capital of Dwarvenkind, a sprawling underground metropolis rumored to be the birthplace of colossal Dreadnoughts and fabled Mechs.",
+            "area": {
+                "x": {
+                    "min": 1566,
+                    "max": 1599
+                },
+                "y": {
+                    "min": 872,
+                    "max": 923
+                }
+            }
+        },
+        {
+            "name": "Iskaldur (Village)",
+            "description": "A remote and mysterious small Dwarven village in Frostheim, whose inhabitants are known for their uncanny ability to travel vast distances with surprising speed.",
+            "area": {
+                "x": {
+                    "min": 1684,
+                    "max": 1709
+                },
+                "y": {
+                    "min": 856,
+                    "max": 876
                 }
             }
         }
     ],
+    "Cloud Sprites": [
+        "cloud_1.png",
+        "cloud_2.png",
+        "cloud_3.png",
+        "cloud_4.png",
+        "cloud_5.png"
+    ],
     "Region Music": [
+        {
+            "sound path": "carzun_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 7126,
+                    "max": 8880
+                },
+                "y": {
+                    "min": 808,
+                    "max": 2592
+                }
+            }
+        },
+        {
+            "sound path": "erynlas_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 287,
+                    "max": 1659
+                },
+                "y": {
+                    "min": 130,
+                    "max": 1435
+                }
+            }
+        },
+        {
+            "sound path": "frostheim_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 7265,
+                    "max": 9496
+                },
+                "y": {
+                    "min": 3382,
+                    "max": 5700
+                }
+            }
+        },
+        {
+            "sound path": "meridia_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 60,
+                    "max": 3075
+                },
+                "y": {
+                    "min": 4128,
+                    "max": 5700
+                }
+            }
+        },
         {
             "sound path": "narmin_theme.mp3",
             "area": {
                 "x": {
-                    "min": 0,
-                    "max": 9999
+                    "min": 1938,
+                    "max": 3024
                 },
                 "y": {
-                    "min": 0,
-                    "max": 9999
+                    "min": 820,
+                    "max": 1758
+                }
+            }
+        },
+        {
+            "sound path": "nocturnia_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 3825,
+                    "max": 4616
+                },
+                "y": {
+                    "min": 503,
+                    "max": 1582
+                }
+            }
+        },
+        {
+            "sound path": "tianxia_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 403,
+                    "max": 1073
+                },
+                "y": {
+                    "min": 1733,
+                    "max": 2367
+                }
+            }
+        },
+        {
+            "sound path": "westmarch_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 3048,
+                    "max": 5770
+                },
+                "y": {
+                    "min": 2040,
+                    "max": 4296
+                }
+            }
+        },
+        {
+            "sound path": "westmarch_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 3048,
+                    "max": 7002
+                },
+                "y": {
+                    "min": 2040,
+                    "max": 3192
+                }
+            }
+        },
+        {
+            "sound path": "xaloc_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 4337,
+                    "max": 5986
+                },
+                "y": {
+                    "min": 4800,
+                    "max": 5700
                 }
             }
         }
