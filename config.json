@@ -17,7 +17,7 @@
             "Land Routes": true,
             "Sea Routes": true
         },
-        "TEST-TrackMousePosition": true
+        "TEST-TrackMousePosition": false
     },
     "Maps": {
         "Grid": "map_grid.jpg",

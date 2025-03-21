@@ -21,7 +21,7 @@ const ctx = canvas.getContext('2d');
 const EFFECT_PATH = "effects/";
 
 export function startInteractiveMap() {
-    updateRegionSound(1, 1, 0);
+    updateRegionSound();
 }
 
 // Function to be passed as a callback for redrawing
@@ -34,14 +34,15 @@ const redrawCanvas = async () => {
 async function initializeLoading() {
     await loadConfigFile();
 
-    // Set the wallpaper source AFTER config is loaded
+    // Setup loading screen and onload handler BEFORE setting the image source
+    setupLoadingScreen(wallpaper, redrawCanvas);
+
+    // Set the wallpaper source after attaching the onload handler
     if (MAP_FILES && MAP_FILES["Grid"]) {
         wallpaper.src = MAPS_PATH + MAP_FILES["Grid"];
     } else {
         console.error('MAP_FILES or MAP_FILES["Grid"] is not defined after config load.');
     }
-
-    setupLoadingScreen(wallpaper, redrawCanvas);
 }
 
 // Load config and then initialize loading
