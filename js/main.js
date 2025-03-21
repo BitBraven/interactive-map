@@ -21,6 +21,53 @@ const ctx = canvas.getContext('2d');
 const EFFECT_PATH = "effects/";
 
 export function startInteractiveMap() {
+
+    // Add event listeners for Tool Nav Bar elements
+    document.getElementById('toggleGridButton').addEventListener('click', () => {
+        createAndPlayAudio(EFFECT_PATH + "toggle_grid.mp3", 0.3);
+        handleGridToggle(wallpaper, redrawCanvas);
+    });
+    document.getElementById('resetZoomButton').addEventListener('click', () => {
+        createAndPlayAudio(EFFECT_PATH + "reset_zoom.mp3", 0.3);
+        resetZoom();
+    });
+    document.getElementById('dayNightButton').addEventListener('click', () => {
+        createAndPlayAudio(EFFECT_PATH + "toggle_time.mp3", 0.3);
+        handleDayNightToggle();
+    });
+    document.getElementById('soundPanelButton').addEventListener('click', () => {
+        createAndPlayAudio(EFFECT_PATH + "toggle_sound_panel.mp3", 0.3);
+        handleSoundPanelToggle();
+    });
+    document.getElementById('weatherButton').addEventListener('click', () => {
+        createAndPlayAudio(EFFECT_PATH + "toggle_weather.mp3", 0.3);
+        handleWeatherToggle();
+    });
+    document.getElementById('overlaysButton').addEventListener('click', () => {
+        createAndPlayAudio(EFFECT_PATH + "toggle_overlays.mp3", 0.3);
+        toggleOverlays();
+    });
+
+    // Interactive Map Location Tooltips
+    canvas.addEventListener('mousemove', processMouseMove);
+    canvas.addEventListener('mouseleave', processMouseLeave);
+
+    // Add event listeners for each overlay toggle
+    document.querySelectorAll('.overlay-list-item').forEach(item => {
+        const overlayTextElement = item.querySelector('.overlay-text');
+        if (overlayTextElement) {
+            const overlayName = overlayTextElement.textContent;
+            item.addEventListener('click', () => {
+                if (!item.classList.contains('disabled-overlay-item')) {
+                    toggleOverlay(overlayName, redrawCanvas);
+                }
+            });
+        }
+    });
+
+    setupNavBarTooltipListeners();
+
+    //Misc
     updateRegionSound();
 }
 
@@ -47,32 +94,6 @@ async function initializeLoading() {
 
 // Load config and then initialize loading
 initializeLoading();
-
-// Add event listeners for UI elements
-document.getElementById('toggleGridButton').addEventListener('click', () => {
-    createAndPlayAudio(EFFECT_PATH + "toggle_grid.mp3", 0.3);
-    handleGridToggle(wallpaper, redrawCanvas);
-});
-document.getElementById('resetZoomButton').addEventListener('click', () => {
-    createAndPlayAudio(EFFECT_PATH + "reset_zoom.mp3", 0.3);
-    resetZoom();
-});
-document.getElementById('dayNightButton').addEventListener('click', () => {
-    createAndPlayAudio(EFFECT_PATH + "toggle_time.mp3", 0.3);
-    handleDayNightToggle();
-});
-document.getElementById('soundPanelButton').addEventListener('click', () => {
-    createAndPlayAudio(EFFECT_PATH + "toggle_sound_panel.mp3", 0.3);
-    handleSoundPanelToggle();
-});
-document.getElementById('weatherButton').addEventListener('click', () => {
-    createAndPlayAudio(EFFECT_PATH + "toggle_weather.mp3", 0.3);
-    handleWeatherToggle();
-});
-document.getElementById('overlaysButton').addEventListener('click', () => {
-    createAndPlayAudio(EFFECT_PATH + "toggle_overlays.mp3", 0.3);
-    toggleOverlays();
-});
 
 // Handle User Config File
 async function loadConfigFile() {
@@ -108,28 +129,6 @@ async function loadConfigFile() {
     }
 }
 
-setupNavBarTooltipListeners();
-
-// Add event listeners for each overlay toggle
-document.querySelectorAll('.overlay-list-item').forEach(item => {
-    const overlayTextElement = item.querySelector('.overlay-text');
-    if (overlayTextElement) {
-        const overlayName = overlayTextElement.textContent;
-        item.addEventListener('click', () => {
-            if (!item.classList.contains('disabled-overlay-item')) {
-                toggleOverlay(overlayName, redrawCanvas);
-            }
-        });
-    }
-});
-
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault(); // Prevents the right click context menu from showing
 });
-
-// =================================
-// Interactive Map Location Tooltips
-// =================================
-
-canvas.addEventListener('mousemove', processMouseMove);
-canvas.addEventListener('mouseleave', processMouseLeave);

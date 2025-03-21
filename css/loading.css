@@ -1,10 +1,25 @@
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 1);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #loading-circle-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(25vw, 25vh, 300px);
-    height: min(25vw, 25vh, 300px);
+    width: 55vmin;
+    height: 55vmin;
+    min-width: 250px;
+    min-height: 250px;
     aspect-ratio: 1;
 }
 
@@ -29,7 +44,7 @@
 }
 
 #loading-tip-text {
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
     font-weight: bold;
     font-family: 'Modesto';
     margin-top: 2vh;
@@ -56,4 +71,25 @@
     height: auto;
     margin-bottom: 2vh;
     aspect-ratio: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* For Safari and older browsers */
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }

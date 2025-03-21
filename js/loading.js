@@ -50,7 +50,7 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
                 loadingScreen.style.opacity = opacity;
                 loadingContent.style.opacity = opacity;
 
-                if (opacity <= -0.2) {
+                if (opacity <= -0) {
                     clearInterval(fadeInterval);
                     loadingScreen.style.display = 'none';
                     loadingContent.style.display = 'none';
