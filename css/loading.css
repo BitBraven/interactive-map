@@ -16,8 +16,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(35vw, 35vh, 300px);
-    height: min(35vw, 35vh, 300px);
+    width: clamp(200px, 30vmin, 400px);
+    height: clamp(200px, 30vmin, 400px);
     aspect-ratio: 1;
 }
 
