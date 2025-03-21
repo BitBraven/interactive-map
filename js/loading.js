@@ -43,9 +43,7 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
     let minimumDelayPassed = false;
 
     const hideLoadingScreen = () => {
-        console.log("CAN IT LOAD?")
         if (imageLoaded && minimumDelayPassed) {
-            console.log("WHOOSH");
             let opacity = 1;
             const fadeInterval = setInterval(() => {
                 opacity -= 0.02;
@@ -79,7 +77,7 @@ export function setupLoadingScreen(wallpaper, drawWallpaperCallback) {
             ellipsisCounter = 1;
         }
     };
-console.log("..........");
+
     // Start the ellipsis animation
     ellipsisInterval = setInterval(updateEllipsis, 500);
 
@@ -88,10 +86,9 @@ console.log("..........");
         drawWallpaperCallback();
         hideLoadingScreen();
     };
-    console.log("TEST");
+
     setTimeout(() => {
         minimumDelayPassed = true;
         hideLoadingScreen();
-        console.log("RAPIDFIRE");
     }, 3000);
 }

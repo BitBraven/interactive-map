@@ -16,8 +16,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(25vw, 25vh, 300px);
-    height: min(25vw, 25vh, 300px);
+    width: min(35vw, 35vh, 300px);
+    height: min(35vw, 35vh, 300px);
     aspect-ratio: 1;
 }
 
@@ -69,4 +69,25 @@
     height: auto;
     margin-bottom: 2vh;
     aspect-ratio: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* For Safari and older browsers */
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
