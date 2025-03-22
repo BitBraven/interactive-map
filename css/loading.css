@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 10, 1);
+    background: rgb(13, 13, 15);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -47,7 +47,6 @@
     font-size: clamp(1.2rem, 1.5vw, 1.8rem);
     font-weight: bold;
     font-family: 'Modesto';
-    margin-top: 2vh;
     text-align: center;
     max-width: 50%;
     line-height: 1.4;
@@ -63,14 +62,47 @@
     text-align: center;
     font-size: 1em;
     font-family: 'Modesto';
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    color: rgb(210, 210, 210);
+    font-size: clamp(0.88rem, 1.65vw, 1.32rem);
 }
 
 #loading-logo {
     width: min(40%, 200px);
     height: auto;
-    margin-bottom: 2vh;
     aspect-ratio: 1;
+}
+
+@media (orientation: portrait) {
+    #loading-circle-container {
+        width: 82vmin;
+        height: 82vmin;
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    .loading-circle {
+        mask-image: radial-gradient(farthest-side, transparent calc(100% - 24px), black calc(100% - 24px));
+        -webkit-mask-image: radial-gradient(farthest-side, transparent calc(100% - 24px), black calc(100% - 24px));
+    }
+
+    #loading-content {
+        width: min(70vw, 80vh, 800px);
+        padding: 40px;
+    }
+
+    #loading-tip-text {
+        font-size: clamp(2rem, 4vw, 3rem);
+        max-width: 80%;
+    }
+
+    #loading-version-text {
+        font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+        bottom: 8%;
+    }
+
+    #loading-logo {
+        width: min(80%, 400px);
+    }
 }
 
 @keyframes rotate {

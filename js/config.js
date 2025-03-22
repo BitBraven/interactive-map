@@ -7,8 +7,8 @@ export let CONFIG_SETTINGS;
 export let MAP_TOOLTIPS;
 export let MAP_FILES;
 export let OVERLAY_FILES;
-export let MIN_ZOOM_SCALE;
-export let MAX_ZOOM_SCALE;
+export let MIN_ZOOM_SCALE = 0.8;
+export let MAX_ZOOM_SCALE = 3;
 export let REGION_MUSIC_DATA;
 
 // Tool Asset Paths
@@ -39,7 +39,7 @@ export const MUSIC_MAX_VOLUME = 0.2;
 // Music Region Sound Configs
 export const REGION_SOUND_DELAY = 5000;
 export const CROSSFADE_DURATION = 1500;
-export const OVERLAY_FADE_DURATION = 1000;
+export const OVERLAY_FADE_DURATION = 500;
 
 // Header configs
 export const TYPING_SPEED = 150;
@@ -78,8 +78,7 @@ export const SOUND_PANEL_ID = "soundPanel";
 export const HEADER_TEXT_ID = "headerText";
 export const HEADER_OVERLAY_ID = "header-overlay";
 export const OVERLAYS_BUTTON_ID = "overlaysButton";
-export const OVERLAYS_NAV_BAR_HEADER_ID = "overlays-nav-bar-header";
-export const OVERLAYS_NAV_BAR_ID = "overlays-nav-bar";
+export const OVERLAYS_PANEL = "overlays-panel";
 export const LOADING_SCREEN_ID = "loading-screen";
 
 // Cloud sprite paths
@@ -119,71 +118,79 @@ export const WEATHER_AUDIO_SOURCES = [
 ];
 
 // Load user configs
-const configLoadPromise = loadConfig();
-
-async function loadConfig() {
-    try {
-        const response = await fetch('config.json');
-        if (!response.ok) {
-            console.error('Failed to load config.json');
-            return;
+const configHandlers = [
+    {
+        key: 'Settings',
+        required: true,
+        missingMessage: 'No Settings found inside config.json file!',
+        action: value => {
+            CONFIG_SETTINGS = value;
+            if (value.Zoom) {
+                MIN_ZOOM_SCALE = value.Zoom.Min;
+                MAX_ZOOM_SCALE = value.Zoom.Max;
+            } else {
+                console.error('No Zoom Settings found inside config.json file!');
+            }
         }
-
-        const config = await response.json();
-        if (config) {
-            if (config["Settings"]) {
-                CONFIG_SETTINGS = config["Settings"];
-
-                if (CONFIG_SETTINGS["Zoom"]) {
-                    let zoom = CONFIG_SETTINGS["Zoom"];
-                    MIN_ZOOM_SCALE = zoom["Min"];
-                    MAX_ZOOM_SCALE = zoom["Max"];
-                }
-                else {
-                    console.error('No Zoom Settings found inside config.json file!');
-                }
-            }
-            else {
-                console.error('No Settings found inside config.json file!');
-            }
-
-            if (config["Maps"]) {
-                MAP_FILES = config["Maps"];
-            }
-            else {
-                console.error('No Map Files found inside config.json file!');
-            }
-
-            if (config["Overlays"]) {
-                OVERLAY_FILES = config["Overlays"];
-            }
-            else {
-                console.error('Could not find Overlay Files from configs file');
-            }
-
-            if (config["Region Music"]) {
-                REGION_MUSIC_DATA = config["Region Music"];
-            }
-            else {
-                console.error('Could not find Region Music Files from configs file');
-            }
-
-            if (config["Map Tooltips"]) {
-                MAP_TOOLTIPS = config["Map Tooltips"];
-            }
-            else {
-                console.error('Could not find Map Tooltips Files from configs file');
-            }
-
-            if (config['Cloud Sprites'] && Array.isArray(config['Cloud Sprites']) && config['Cloud Sprites'].length > 0) {
-                CLOUD_SPRITE_PATHS = config['Cloud Sprites'].map(sprite => USER_SPRITE_PATH + "clouds/" + sprite);
+    },
+    {
+        key: 'Maps',
+        required: true,
+        missingMessage: 'No Map Files found inside config.json file!',
+        action: value => { MAP_FILES = value; }
+    },
+    {
+        key: 'Overlays',
+        required: true,
+        missingMessage: 'Could not find Overlay Files from configs file',
+        action: value => { OVERLAY_FILES = value; }
+    },
+    {
+        key: 'Region Music',
+        required: true,
+        missingMessage: 'Could not find Region Music Files from configs file',
+        action: value => { REGION_MUSIC_DATA = value; }
+    },
+    {
+        key: 'Map Tooltips',
+        required: true,
+        missingMessage: 'Could not find Map Tooltips Files from configs file',
+        action: value => { MAP_TOOLTIPS = value; }
+    },
+    {
+        key: 'Cloud Sprites',
+        required: false,
+        action: value => {
+            if (Array.isArray(value) && value.length > 0) {
+                CLOUD_SPRITE_PATHS = value.map(sprite => `${USER_SPRITE_PATH}clouds/${sprite}`);
             } else {
                 console.log('No valid Cloud Sprites found in config.json, using default.');
             }
         }
+    }
+];
+
+async function loadConfig() {
+    try {
+        const response = await fetch('config.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const config = await response.json();
+        if (!config) throw new Error('Empty configuration file');
+
+        configHandlers.forEach(handler => {
+            const value = config[handler.key];
+            if (value === undefined) {
+                if (handler.required) console.error(handler.missingMessage);
+                return;
+            }
+            handler.action(value);
+        });
+
     } catch (error) {
-        console.error('Error loading config.json:', error);
+        console.error('Error loading config.json:', error.message);
     }
 }
 
+const configLoadPromise = loadConfig();
 export { configLoadPromise as CONFIG_LOAD_PROMISE };

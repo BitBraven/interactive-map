@@ -128,50 +128,111 @@ export function tryUpdateRegionSound() {
     }
 }
 
-canvas.addEventListener("wheel", e => {
-    e.preventDefault();
-    let zoomFactor = 1 + (-e.deltaY * 0.001);
-    let newScale = scale * zoomFactor;
+// Canvas interaction controller
+const setupCanvasInteractions = (canvas) => {
+    let isDragging = false;
+    let isPinching = false;
+    let startDragX, startDragY;
+    let initialDistance, lastScale;
 
-    if (newScale < MIN_ZOOM_SCALE) {
-        zoomFactor = MIN_ZOOM_SCALE / scale;
-        newScale = MIN_ZOOM_SCALE;
-    } else if (newScale > MAX_ZOOM_SCALE) {
-        zoomFactor = MAX_ZOOM_SCALE / scale;
-        newScale = MAX_ZOOM_SCALE;
-    }
+    const CURSOR_GRAB = 'grab';
+    const CURSOR_GRABBING = 'grabbing';
 
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    offsetX = mouseX - zoomFactor * (mouseX - offsetX);
-    offsetY = mouseY - zoomFactor * (mouseY - offsetY);
-
-    scale = newScale;
-    drawWallpaper();
-    tryUpdateRegionSound();
-}, { passive: false });
-
-canvas.addEventListener("mousedown", e => {
-    isDragging = true;
-    startDragX = e.clientX - offsetX;
-    startDragY = e.clientY - offsetY;
-    canvas.style.cursor = "grabbing";
-});
-
-canvas.addEventListener("mousemove", e => {
-    if (isDragging) {
-        offsetX = e.clientX - startDragX;
-        offsetY = e.clientY - startDragY;
+    // Common handlers
+    const updateCanvas = () => {
         drawWallpaper();
         tryUpdateRegionSound();
-    }
-});
+    };
 
-["mouseup", "mouseleave"].forEach(type => {
-    canvas.addEventListener(type, () => {
+    const handleDragStart = (clientX, clientY) => {
+        isDragging = true;
+        startDragX = clientX - offsetX;
+        startDragY = clientY - offsetY;
+        canvas.style.cursor = CURSOR_GRABBING;
+    };
+
+    const handleDragMove = (clientX, clientY) => {
+        if (!isDragging) return;
+        offsetX = clientX - startDragX;
+        offsetY = clientY - startDragY;
+        updateCanvas();
+    };
+
+    const handleZoom = (zoomFactor, centerX, centerY) => {
+        const constrainedScale = Math.min(Math.max(scale * zoomFactor, MIN_ZOOM_SCALE), MAX_ZOOM_SCALE);
+        const scaleRatio = constrainedScale / scale;
+
+        offsetX = centerX - (centerX - offsetX) * scaleRatio;
+        offsetY = centerY - (centerY - offsetY) * scaleRatio;
+        scale = constrainedScale;
+
+        updateCanvas();
+    };
+
+    // Mouse events
+    canvas.addEventListener('wheel', e => {
+        e.preventDefault();
+        const zoomFactor = 1 + (-e.deltaY * 0.001);
+        const rect = canvas.getBoundingClientRect();
+        handleZoom(zoomFactor, e.clientX - rect.left, e.clientY - rect.top);
+    }, { passive: false });
+
+    canvas.addEventListener('mousedown', e => handleDragStart(e.clientX, e.clientY));
+
+    canvas.addEventListener('mousemove', e => handleDragMove(e.clientX, e.clientY));
+
+    // Touch events
+    const handlePinchZoom = (e) => {
+        const newDistance = getDistanceBetweenTouches(e);
+        const rect = canvas.getBoundingClientRect();
+        const [touch1, touch2] = e.touches;
+
+        const centerX = (touch1.clientX + touch2.clientX) / 2 - rect.left;
+        const centerY = (touch1.clientY + touch2.clientY) / 2 - rect.top;
+
+        handleZoom(newDistance / initialDistance, centerX, centerY);
+    };
+
+    canvas.addEventListener('touchstart', e => {
+        e.preventDefault();
+        if (e.touches.length === 1) {
+            handleDragStart(e.touches[0].clientX, e.touches[0].clientY);
+        } else if (e.touches.length === 2) {
+            isPinching = true;
+            initialDistance = getDistanceBetweenTouches(e);
+            lastScale = scale;
+        }
+    }, { passive: false });
+
+    canvas.addEventListener('touchmove', e => {
+        if (isDragging && e.touches.length === 1) {
+            handleDragMove(e.touches[0].clientX, e.touches[0].clientY);
+        } else if (isPinching && e.touches.length === 2) {
+            handlePinchZoom(e);
+        }
+    }, { passive: false });
+
+    // Cleanup events
+    const endInteraction = () => {
         isDragging = false;
-        canvas.style.cursor = "grab";
+        isPinching = false;
+        canvas.style.cursor = CURSOR_GRAB;
         tryUpdateRegionSound();
-    });
-});
+    };
+
+    ['mouseup', 'mouseleave'].forEach(type =>
+        canvas.addEventListener(type, endInteraction)
+    );
+
+    canvas.addEventListener('touchend', e =>
+        e.touches.length === 0 && endInteraction()
+    );
+
+    // Helper function
+    const getDistanceBetweenTouches = e => Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+    );
+};
+
+setupCanvasInteractions(canvas);

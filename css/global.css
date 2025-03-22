@@ -24,4 +24,5 @@ body {
 #questifyreInteractiveMap {
     display: block;
     cursor: grab;
+    touch-action: none;
 }
