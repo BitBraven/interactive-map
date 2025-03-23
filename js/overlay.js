@@ -1,4 +1,5 @@
 import { CONFIG_SETTINGS, CONFIG_LOAD_PROMISE, OVERLAYS_PATH, OVERLAY_FILES, OVERLAYS_PANEL } from './config.js';
+import { loadWithScreen, loadImageWithCache } from './loading.js';
 import { createAndPlayAudio } from './audio.js';
 import { disableOverlay } from './ui.js';
 
@@ -80,22 +81,7 @@ export function toggleOverlays() {
     }
 }
 
-export function toggleOverlay(overlayName, drawWallpaperCallback) {
-    overlayStates[overlayName] = !overlayStates[overlayName];
-    const isEnabled = overlayStates[overlayName];
-    const imagePath = OVERLAYS_PATH + overlayNameMap[overlayName];
-
-    // Load overlay image if enabled
-    if (isEnabled) {
-        overlayImages[overlayName] = new Image();
-        overlayImages[overlayName].onload = drawWallpaperCallback; // Redraw when loaded
-        overlayImages[overlayName].src = imagePath;
-    } else {
-        overlayImages[overlayName] = null; // Remove the image when disabled
-        drawWallpaperCallback(); // Redraw to clear the overlay
-    }
-
-    // Update item checkmark
+const updatePanelCheckmarkVisual = function (overlayName, isEnabled) {
     const overlayItem = Array.from(document.querySelectorAll('.overlay-list-item')).find(item =>
         item.querySelector('.overlay-list-item-text').textContent === overlayName
     );
@@ -109,8 +95,36 @@ export function toggleOverlay(overlayName, drawWallpaperCallback) {
             }
         }
     }
+}
 
-    createAndPlayAudio("effects/toggle_overlay.mp3", 0.7);
+export async function toggleOverlay(overlayName, drawWallpaperCallback) {
+    const isEnabled = !overlayStates[overlayName];
+    overlayStates[overlayName] = isEnabled;
+    const imagePath = OVERLAYS_PATH + overlayNameMap[overlayName];
+
+    try {
+        if (isEnabled) {
+            await loadWithScreen(async () => {
+                overlayImages[overlayName] = await loadImageWithCache(
+                    imagePath,
+                    overlayImages[overlayName]
+                );
+                drawWallpaperCallback();
+            });
+        } else {
+            await loadWithScreen(async () => {
+                overlayImages[overlayName] = null;
+                await drawWallpaperCallback();
+            });
+        }
+    } catch (error) {
+        console.error(`Failed to toggle ${overlayName}:`, error);
+        overlayStates[overlayName] = !isEnabled; // Revert state
+        throw error;
+    } finally {
+        updatePanelCheckmarkVisual(overlayName, isEnabled);
+        createAndPlayAudio("effects/toggle_overlay.mp3", 0.7);
+    }
 }
 
 export function drawOverlays(ctx) {
