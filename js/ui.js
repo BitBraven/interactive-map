@@ -7,8 +7,7 @@ import { loadWithScreen } from './loading.js';
 
 let gridActive = true;
 const gridButton = document.getElementById(TOGGLE_GRID_BUTTON_ID);
-const updateGridButtonVisual = function()
-{
+const updateGridButtonVisual = function () {
     const buttonImageSrc = gridActive ? BUTTON_PATH + "grid_0.png" : BUTTON_PATH + "grid_1.png";
     if (gridButton && gridButton.querySelector("img")) {
         gridButton.querySelector("img").src = buttonImageSrc;

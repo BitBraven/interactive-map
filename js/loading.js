@@ -101,12 +101,12 @@ const loadingScreen = document.getElementById(LOADING_SCREEN_SECONDARY_ID);
 const loadingContent = document.getElementById(LOADING_CONTENT_SECONDARY_ID);
 const DELAY_MS = 1;
 
-const showLoadingWidget = function() {
+const showLoadingWidget = function () {
     loadingScreen.style.display = 'flex';
     loadingContent.style.display = 'flex';
 }
 
-const hideLoadingWidget = function() {
+const hideLoadingWidget = function () {
     loadingScreen.style.opacity = 1;
     loadingContent.style.opacity = 1;
     let opacity = 1;

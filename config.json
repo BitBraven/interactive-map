@@ -1,6 +1,10 @@
 {
     "Settings": {
+<<<<<<< HEAD
         "Page Title": "Haven",
+=======
+        "Page Title": "Sample Map",
+>>>>>>> abf5e729971395765e30bf803ed8bdae0e9d525c
         "Enable Grid Toggle": true,
         "Enable Reset View": true,
         "Enable Day Time Toggle": true,

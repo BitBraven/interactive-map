@@ -12,11 +12,11 @@ import {
     WEATHER_BUTTON_ID
 } from './config.js';
 
-import { 
-    disableButton, 
-    handleGridToggle, 
-    handleSoundPanelToggle, 
-    setupNavBarTooltipListeners 
+import {
+    disableButton,
+    handleGridToggle,
+    handleSoundPanelToggle,
+    setupNavBarTooltipListeners
 } from './ui.js';
 
 import { drawWallpaper, getWallpaper, resetView } from './canvas.js';

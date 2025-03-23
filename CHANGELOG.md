@@ -2,43 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
-## Alpha v0.3.0-ZN1 - 22-03-2025
+## Alpha v0.5.0-BN1
 
-This release focuses on performance improvements, code refactoring for better maintainability, and UI/UX enhancements.
+This release includes several improvements and refactors aimed at enhancing performance, user experience, and code maintainability. Key changes include:
 
-### Mobile Support
+**Performance Improvements:**
 
-* **Added Touch Support:** The application now support touch panning and zooming.
-* **UI/UX Improvements** Increased the size of various UI/UX elements for mobile, specially in Portrait mode.
+* Made the loading of map and overlay sprites asynchronous. This should improve initial load times and responsiveness.
+* Improved the secondary loading screen code and made it not display if the load time is very quick, providing a smoother experience for fast loads.
+* Optimized the size of several art assets, reducing the overall footprint of the application.
 
-### Performance Improvements
+**User Interface and Experience Enhancements:**
 
-* **Greatly reduced the sample map asset sizes:** Optimized the size of sample map assets, leading to a smaller overall application footprint and potentially faster loading times.
-* **Greatly reduced the size of various image assets:** Image assets across the application have been optimized to reduce their file sizes, improving performance and reducing bandwidth usage.
+* The "overlays-panel" HTML element is now hidden by default using CSS rules instead of HTML styles. This promotes better separation of concerns.
+* Added a script to "index.html" that forces critical loading of content before the page is visible, preventing Flash of Unstyled Content (FOUC) and improving visual stability.
+* Replaced the "Reset Zoom" button's icon with a new one that should make its usage more readily apparent.
+* Refactored the "Reset Zoom" button to "Reset View" for clarity.
+* Zooming and panning have been significantly improved on mobile devices, offering a smoother and more intuitive experience.
+* Altered CSS rules for "navbar.css", making it much more readable and easily interacted with on devices using portrait orientation.
 
-### Refactorings
+**Code Refactoring and Improvements:**
 
-* **Renamed "tools-nav-bar" to "bottom-nav-bar":** The navigation bar previously used for tools has been renamed to "bottom-nav-bar" to better reflect its position and purpose within the application.
-* **Standardized bottom navbar CSS rules:** The CSS rules for elements within the "bottom-nav-bar" have been refactored to use a generic `nav-bar` class. This provides a consistent styling foundation for future navigation bars within the project.
-* **Renamed "overlays-nav-bar" to "overlay-panel":** The navigation bar related to overlays has been refactored and renamed to "overlay-panel", indicating its function as a panel for overlay controls.
-* **Split "overlays.css" into "tooltips.css" and "overlays_panel.css":** The CSS rules within the "overlays.css" file have been separated into two more specific files: "tooltips.css" for tooltip-related styles and "overlays_panel.css" for the styles specific to the overlay panel. This improves code organization and maintainability.
+* Removed any unused variables throughout the project, contributing to a cleaner codebase.
+* The "main.js" file now loads several DOM elements utilizing variables from "config.js", instead of being hardcoded. This improves configurability and reduces redundancy.
+* Refactored the function "setupTooltipListeners" to "setupNavBarTooltipListeners" for better clarity and to reflect its specific purpose.
+* Refactored the "resetZoom" function to "resetView" to align with the button's new name.
+* All HTML element IDs have been refactored to use kebab-case for consistency and best practices.
+* Modified the "loadConfigFile" function in "main.js" to use ternary operators and other logical simplifications, resulting in less verbose code.
 
-### UI/UX Changes
+**Configuration Changes:**
 
-* **Replaced buttons with stylized checkmarks in the "Overlay" panel:** The buttons within the list items of the "Overlay" panel have been replaced with visually appealing and intuitive stylized checkmarks to indicate selection.
-* **Dynamic height for "Overlays" panel items:** Items within the "Overlays" panel now dynamically adjust their height based on the amount of text they contain, improving readability for varying content lengths.
-* **Disabled text selection under the "Overlays" panel:** Text elements located under the "Overlays" panel are no longer selectable, preventing accidental text highlighting and improving the user experience.
-* **Redesigned "Toggle Grid" button icon:** The icon for the "Toggle Grid" button has been redesigned with a focus on aesthetics and clarity, making its function more easily understandable.
-* **Redesigned "Rain Weather" icon:** The icon representing "Rain Weather" has been updated with a more visually appealing and easily recognizable design.
-
-## Alpha v0.3.2-ZN2 / ZN3 - 22-03-2025
-
-This release deals with some issues leftover from the last update.
-
-### Performance Improvements
-
-* **Greatly reduced the background asset size:** Optimized the size of background and replaced it with a more fitting artstyle.
-
-### Bug Fixes
-
-* **Fixed Tooltips** Tooltip functionality has been restored.
+* **Important:** Refactored the "Enable Reset Zoom" property in "config.json" to "Enable Reset View". **Please update your `config.json` file accordingly!**
+* Added the "Page Title" property in "config.json" that allows modification of the page's title displayed in the browser.
