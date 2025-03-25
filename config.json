@@ -7,6 +7,7 @@
         "Enable Sound Panel": true,
         "Enable Weather Toggle": true,
         "Enable Overlays": true,
+        "Enable Settings": false,
         "Welcome Header": "WELCOME TO HAVEN",
         "Zoom": {
             "Min": 0.8,
@@ -18,7 +19,7 @@
             "Land Routes": true,
             "Sea Routes": true
         },
-        "TEST-TrackMousePosition": false
+        "Developer Mode": true
     },
     "Maps": {
         "Grid": "map_grid.webp",
@@ -1150,6 +1151,1364 @@
                     "max": 4666
                 }
             }
+        },
+        {
+            "name": "Bank of Talon",
+            "description": "Haven's oldest and biggest bank is conveniently safe from most dangers. As the saying goes, \"He who controls gold, controls the world\".",
+            "area": {
+                "x": {
+                    "min": 3743,
+                    "max": 3848
+                },
+                "y": {
+                    "min": 4429,
+                    "max": 4546
+                }
+            }
+        },
+        {
+            "name": "Anchortown",
+            "description": "This small town was built exclusively by the Bank to house its countless workers, but it quickly grew even larger as the island literally flowed with gold.",
+            "area": {
+                "x": {
+                    "min": 3604,
+                    "max": 3738
+                },
+                "y": {
+                    "min": 4508,
+                    "max": 4591
+                }
+            }
+        },
+        {
+            "name": "Coral Spire",
+            "description": "The Coral Spire rises majestically from the turquoise waters just off the coast of Tidewater, a spiraling tower built from living coral that shimmers with an array of vibrant colors. Bioluminescent polyps illuminate its surface at night, casting an ethereal glow across the surrounding sea. Within this unique structure resides the esteemed Sage Kah'Rala, a wise and enigmatic figure known for their profound understanding of the ocean's currents, the secrets held within ancient shells, and the delicate balance of the tropical ecosystem.",
+            "area": {
+                "x": {
+                    "min": 7916,
+                    "max": 8066
+                },
+                "y": {
+                    "min": 2138,
+                    "max": 2280
+                }
+            }
+        },
+        {
+            "name": "Polar Spire",
+            "description": "The Polar Spire pierces the glacial sky atop the Frostpeak, a formidable structure of polished obsidian reinforced with shimmering veins of what appears to be perpetually freezing metal. Runes of power glow with a faint blue light along its surface, interwoven with intricate networks of frost-resistant conduits that hum with contained energy. Within this technologically advanced sanctuary resides the esteemed Seer Borin Stoneforge, a dwarven sage whose mastery extends beyond traditional magic into the realm of arcane engineering.",
+            "area": {
+                "x": {
+                    "min": 8770,
+                    "max": 8925
+                },
+                "y": {
+                    "min": 4696,
+                    "max": 4848
+                }
+            }
+        },
+        {
+            "name": "Flayer Jungle",
+            "description": "The Flayer Jungle is a place where the very air seems to vibrate with fear. Twisted, thorny trees claw at the sky, casting long, distorted shadows that dance with the unseen movements of the Flayers. The distant, chilling screams that echo through the dense foliage serve as a constant reminder of the horrors that lurk within, and the ground is littered with the gnawed bones of their unfortunate prey.",
+            "area": {
+                "x": {
+                    "min": 5399,
+                    "max": 5662
+                },
+                "y": {
+                    "min": 5461,
+                    "max": 5569
+                }
+            }
+        },
+        {
+            "name": "Jaguar Spire",
+            "description": "The Jaguar Spire, draped in thick, vibrant vines and crowned with a cluster of luminous, jade-like crystals, emerges from the dense emerald canopy like the fang of some colossal jungle beast. The air around it hums with a palpable magical energy, and the roars of unseen creatures echo through the ancient trees that surround its base. Within this verdant tower resides the wise Seer Xil'thok, a reclusive figure whose knowledge of the jungle's secrets and the movements of its elusive creatures is unparalleled.",
+            "area": {
+                "x": {
+                    "min": 5776,
+                    "max": 5900
+                },
+                "y": {
+                    "min": 5068,
+                    "max": 5209
+                }
+            }
+        },
+        {
+            "name": "Travincal",
+            "description": "The ruins of Travincal stand as a stark testament to the jungle's unforgiving nature. Crumbling stone structures, once grand and imposing, are now choked by relentless vines and teeming with unseen life. The air hangs heavy with the scent of decay and the whispers of forgotten rituals. Broken idols lie scattered amidst the rubble, hinting at a sudden and violent end, though the jungle has long since begun to reclaim its territory, shrouding the city's demise in an eerie silence.",
+            "area": {
+                "x": {
+                    "min": 4560,
+                    "max": 4769
+                },
+                "y": {
+                    "min": 5218,
+                    "max": 5367
+                }
+            }
+        },
+        {
+            "name": "Great Marsh",
+            "description": "The Great Marsh is a treacherous expanse of stagnant water, tangled mangroves, and treacherous quicksand. The air is thick with humidity and the buzzing of insects, many carrying debilitating diseases. Strange, bioluminescent fungi grow on decaying logs, casting an unsettling glow in the dim light that penetrates the dense canopy. The marsh is said to be home to monstrous amphibians and reptiles, making every step a gamble.",
+            "area": {
+                "x": {
+                    "min": 5431,
+                    "max": 5698
+                },
+                "y": {
+                    "min": 4997,
+                    "max": 5087
+                }
+            }
+        },
+        {
+            "name": "Whispering Fens",
+            "description": "The Whispering Fens are a network of murky waterways shrouded in a perpetual mist that clings to the gnarled cypress trees. The silence here is unnerving, broken only by the gentle lapping of dark water against the banks and the occasional, unsettling whisper that seems to emanate from the depths. Those who dare to navigate these waters with open eyes are said to be driven mad by the fleeting glimpses of grotesque shapes moving beneath the surface.",
+            "area": {
+                "x": {
+                    "min": 5192,
+                    "max": 5265
+                },
+                "y": {
+                    "min": 4860,
+                    "max": 5103
+                }
+            }
+        },
+        {
+            "name": "Spider Forest",
+            "description": "The Spider Forest is a nightmarish realm where colossal webs, thick as ship ropes, stretch between ancient trees, glistening with captured dew and the remains of unfortunate creatures. The rustling of countless legs and the clicking of chitinous mandibles fill the air, a constant reminder of the myriad arachnid eyes that watch from the shadows. The monstrous, humanoid-sized spiders are terrifying enough, but the legends of an even larger queen, whose venom can paralyze an elephant, keep most sane individuals far away.",
+            "area": {
+                "x": {
+                    "min": 4951,
+                    "max": 5187
+                },
+                "y": {
+                    "min": 4970,
+                    "max": 5052
+                }
+            }
+        },
+        {
+            "name": "Phantom Mire",
+            "description": "The Phantom Mire is a region of perpetual twilight beneath a canopy so dense that sunlight rarely penetrates. The ground is soft and yielding, often concealing hidden pools of stagnant, black water. Eerie, phosphorescent moss clings to the trees, casting an unsettling glow that illuminates fleeting, spectral shapes that disappear as quickly as they appear, leaving one to question if they were ever truly there.",
+            "area": {
+                "x": {
+                    "min": 4963,
+                    "max": 5096
+                },
+                "y": {
+                    "min": 5082,
+                    "max": 5187
+                }
+            }
+        },
+        {
+            "name": "Nightveil Boughs",
+            "description": "Nightveil Boughs is a section of the jungle where the trees grow so tall and their canopies so intertwined that they blot out almost all light, creating an eternal night on the forest floor. Strange, nocturnal flora with bioluminescent patterns illuminates the path, but the darkness beyond their glow is absolute, concealing unknown predators and ancient secrets best left undisturbed. The air is thick with the scent of exotic, night-blooming flowers and the rustling of unseen creatures in the impenetrable blackness.",
+            "area": {
+                "x": {
+                    "min": 4464,
+                    "max": 4655
+                },
+                "y": {
+                    "min": 5066,
+                    "max": 5186
+                }
+            }
+        },
+        {
+            "name": "Sunfire Spire",
+            "description": "Towering towards the cerulean sky, a beacon of white reflects the harsh Meridian sun. This magnificent structure, capped with a stunning blue dome reminiscent of ancient architectural marvels, is known as the Sunfire Spire. Within its hallowed halls resides one of Haven's seven Seers, wise sages who guide their lands with profound knowledge. The current Seer of Meridia is a man named Qasim, whose insights are sought by many across the continent.",
+            "area": {
+                "x": {
+                    "min": 2570,
+                    "max": 2679
+                },
+                "y": {
+                    "min": 4491,
+                    "max": 4614
+                }
+            }
+        },
+        {
+            "name": "Dunefern Copse",
+            "description": "Amidst the endless rolling dunes, a peculiar sight greets the weary traveler. Here, in a shallow depression, thrives a small collection of resilient, fern-like plants with deep roots that tap into hidden moisture beneath the sand. This unexpected patch of green, known as the Dunefern Copse, offers a brief respite from the harsh desert and is often frequented by small desert creatures seeking shade and water.",
+            "area": {
+                "x": {
+                    "min": 2099,
+                    "max": 2240
+                },
+                "y": {
+                    "min": 4611,
+                    "max": 4703
+                }
+            }
+        },
+        {
+            "name": "Far Oasis",
+            "description": "A vibrant emerald hue distinguishes this vital water source from the surrounding golden sands. The Far Oasis, a significant body of water in the arid landscape, teems with life. Colorful birds flock to its shores, gazelles graze on the sparse vegetation nearby, and even the occasional desert fox can be spotted quenching its thirst. Small, tightly-knit communities have sprung up around its edges, relying on its life-giving waters, while travelers often find it a welcome and essential stop on their journeys.",
+            "area": {
+                "x": {
+                    "min": 2519,
+                    "max": 2692
+                },
+                "y": {
+                    "min": 4825,
+                    "max": 4896
+                }
+            }
+        },
+        {
+            "name": "Valley of Snakes",
+            "description": "Whispers of forgotten power and ancient secrets echo through this treacherous ravine. The Valley of Snakes, a deep fissure in the Meridian landscape, is rumored to hold powerful artifacts from a bygone era. However, the valley's name is well-earned, as countless venomous snakes slither amongst the rocks, and tales are told of cunning lizard folk who lie in wait to ambush unsuspecting caravans seeking the valley's legendary treasures.",
+            "area": {
+                "x": {
+                    "min": 2383,
+                    "max": 2640
+                },
+                "y": {
+                    "min": 5075,
+                    "max": 5145
+                }
+            }
+        },
+        {
+            "name": "Lost City",
+            "description": "Beneath the shifting sands, the remnants of a once-grand civilization lie in silent slumber. The Lost City, a metropolis that predates the Meridian Empire by millennia, is said to have been the jewel of an ancient elven kingdom. Now, only heavily eroded foundations and crumbling walls, mostly buried beneath the desert, hint at the catastrophe that brought about its sudden and complete annihilation.",
+            "area": {
+                "x": {
+                    "min": 2481,
+                    "max": 2630
+                },
+                "y": {
+                    "min": 5340,
+                    "max": 5441
+                }
+            }
+        },
+        {
+            "name": "Mirage Oasis",
+            "description": "On the horizon, shimmering like a promise in the heat haze, a vision of water and lush greenery often appears. The Mirage Oasis plays tricks on the eyes of parched travelers, sometimes appearing as a vibrant haven, only to dissolve into the familiar expanse of sand upon closer inspection. Yet, local legends speak of a true, hidden oasis that only reveals itself to those who are truly lost and deserving of its respite.",
+            "area": {
+                "x": {
+                    "min": 2018,
+                    "max": 2209
+                },
+                "y": {
+                    "min": 5473,
+                    "max": 5605
+                }
+            }
+        },
+        {
+            "name": "Alcarnus Passage",
+            "description": "Carved through towering canyon walls, a well-maintained path offers the only reliable route towards the heart of the Meridian Empire. Alcarnus Passage is a testament to imperial engineering, providing a safe and relatively comfortable journey through the otherwise impassable peaks. Imperial guards patrol the passage, ensuring the safety of travelers, and strategically placed rest stops and bustling merchant outposts offer supplies and trade along the way.",
+            "area": {
+                "x": {
+                    "min": 1805,
+                    "max": 2042
+                },
+                "y": {
+                    "min": 4937,
+                    "max": 5036
+                }
+            }
+        },
+        {
+            "name": "Hazir Crossing",
+            "description": "For those venturing towards the radiant city of Iraduun or seeking an alternative to the guarded Alcarnus Passage, the waters of the Imperial Sea offer a direct route. Hazir Crossing, named after the legendary captain who first established it, consists of a fleet of sturdy ferries that tirelessly ply the waters between the western and eastern shores of Meridia. Though the original Captain Hazir is long gone, his legacy lives on in this vital maritime link.",
+            "area": {
+                "x": {
+                    "min": 1594,
+                    "max": 1740
+                },
+                "y": {
+                    "min": 4826,
+                    "max": 4961
+                }
+            }
+        },
+        {
+            "name": "Khasim Crossing",
+            "description": "A seemingly innocuous checkpoint on the road to Khalideen, Khasim Crossing is a point of contention among Meridians. While the Imperial authorities maintain it is merely a necessary point for logistical and security purposes, many locals whisper that it is nothing more than a cleverly disguised tollbooth. Regardless of its true nature, every traveler wishing to proceed must pay a fee to the heavily armed guards stationed there.",
+            "area": {
+                "x": {
+                    "min": 1409,
+                    "max": 1560
+                },
+                "y": {
+                    "min": 5121,
+                    "max": 5248
+                }
+            }
+        },
+        {
+            "name": "Sunshade Thicket",
+            "description": "In an otherwise barren stretch of the desert, an anomaly of nature provides welcome relief from the relentless sun. The Sunshade Thicket is a dense cluster of uniquely adapted trees with broad, overlapping leaves that create a surprisingly cool and shaded environment beneath their canopy. Desert creatures and weary travelers alike seek refuge within its tranquil depths.",
+            "area": {
+                "x": {
+                    "min": 1127,
+                    "max": 1333
+                },
+                "y": {
+                    "min": 4517,
+                    "max": 4581
+                }
+            }
+        },
+        {
+            "name": "Sandstrider Copse",
+            "description": "Scattered amongst the more resilient desert flora, a peculiar type of hardy bush grows in small clusters. These areas, known as the Sandstrider Copse, are easily identifiable by the tough, fibrous nature of the vegetation, which is said to be a favorite nesting material for the elusive sandstrider creatures that roam the dunes.",
+            "area": {
+                "x": {
+                    "min": 1109,
+                    "max": 1334
+                },
+                "y": {
+                    "min": 5032,
+                    "max": 5107
+                }
+            }
+        },
+        {
+            "name": "Aridwood Jungle",
+            "description": "Against all expectations, a sparse but persistent forest stretches across a section of the Meridian landscape. The Aridwood Jungle is comprised of tall, spindly trees with surprisingly deep root systems that allow them to survive the harsh, dry conditions. While not as dense or lush as jungles in other lands, it offers a unique and somewhat eerie environment, home to specialized desert wildlife.",
+            "area": {
+                "x": {
+                    "min": 1226,
+                    "max": 1418
+                },
+                "y": {
+                    "min": 5447,
+                    "max": 5515
+                }
+            }
+        },
+        {
+            "name": "Dahlgur Oasis",
+            "description": "Born from the extraordinary actions of the enigmatic Dahlgur, this sprawling haven stands as a testament to his power. The Dahlgur Oasis is a vibrant tapestry of life, fed by crystal-clear waters that spring forth from the desert floor. Lush vegetation blankets the area, from towering palm trees to vibrant flowering bushes, creating a sanctuary for a diverse array of desert creatures. The air hums with the sounds of birdsong and buzzing insects, a stark contrast to the arid lands that surround it.",
+            "area": {
+                "x": {
+                    "min": 730,
+                    "max": 945
+                },
+                "y": {
+                    "min": 5213,
+                    "max": 5348
+                }
+            }
+        },
+        {
+            "name": "Desolate Fields",
+            "description": "Stretching along the southwestern coast, these windswept plains seem utterly devoid of interest. The Desolate Fields offer little in the way of resources or shelter, and few venture into their barren expanse. However, local legend speaks of a rare and luminous desert bloom, the \"Moonpetal,\" said to only appear in these fields under the light of a full moon. It is rumored to possess potent magical properties, making the Desolate Fields a surprisingly sought-after destination for certain adventurers.",
+            "area": {
+                "x": {
+                    "min": 311,
+                    "max": 537
+                },
+                "y": {
+                    "min": 5285,
+                    "max": 5384
+                }
+            }
+        },
+        {
+            "name": "Wadi Canopy",
+            "description": "Where a dry riverbed once snaked through the landscape, a natural wonder now provides shade and shelter. The Wadi Canopy is formed by a dense network of hardy vines and flowering creepers that have grown across the high, rocky walls of the wadi, creating a natural tunnel of greenery overhead. This unexpected haven offers a cool and fragrant passage through an otherwise exposed region.",
+            "area": {
+                "x": {
+                    "min": 823,
+                    "max": 979
+                },
+                "y": {
+                    "min": 4708,
+                    "max": 4768
+                }
+            }
+        },
+        {
+            "name": "Duneswept Shores",
+            "description": "Where the endless dunes meet the vast expanse of the Imperial Sea, a unique landscape has formed. The Duneswept Shores are characterized by towering sand dunes that slope directly into the water, their forms constantly reshaped by the relentless winds. Strange rock formations, sculpted by both wind and wave, jut out from the shoreline, creating a dramatic and often eerie coastline.",
+            "area": {
+                "x": {
+                    "min": 187,
+                    "max": 360
+                },
+                "y": {
+                    "min": 4590,
+                    "max": 4686
+                }
+            }
+        },
+        {
+            "name": "Dry Hills",
+            "description": "Rolling across the horizon in a seemingly endless succession, the Dry Hills offer a stark and unforgiving landscape. Sparse, tough grasses and hardy, thorny shrubs cling to the parched slopes, struggling to survive in the arid conditions. The air here is often still and carries the scent of dry earth and sun-baked rock. These hills are a challenging terrain for travelers, offering little in the way of shelter or readily available water sources, but they possess a stark beauty in their resilience.",
+            "area": {
+                "x": {
+                    "min": 2203,
+                    "max": 2393
+                },
+                "y": {
+                    "min": 4899,
+                    "max": 5026
+                }
+            }
+        },
+        {
+            "name": "Ember Sandscape",
+            "description": "As the sun dips below the horizon, a breathtaking spectacle unfolds across this stretch of the Meridian desert. The Ember Sandscape is characterized by sands of a deep, fiery red hue, interspersed with streaks of shimmering gold. During the twilight hours, these sands seem to glow with an inner light, casting an ethereal and otherworldly ambiance across the dunes. It is said that the very grains of sand here contain trace amounts of a rare, heat-retaining mineral, giving the landscape its distinctive color and subtle warmth even after nightfall.",
+            "area": {
+                "x": {
+                    "min": 453,
+                    "max": 663
+                },
+                "y": {
+                    "min": 4971,
+                    "max": 5050
+                }
+            }
+        },
+        {
+            "name": "Craterhollow",
+            "description": "South of Jasirah, an unsettling landscape unfolds, marked by a seemingly endless array of colossal depressions in the earth. These massive craters, their origins lost to the mists of time, define the region known as Craterhollow. Despite the surrounding desert, these hollows remain strangely warm to the touch, radiating a subtle heat that never seems to dissipate, and defying the relentless Meridian winds by never accumulating sand within their depths. This peculiar phenomenon has made Craterhollow a place of intense curiosity and hushed speculation.",
+            "area": {
+                "x": {
+                    "min": 731,
+                    "max": 938
+                },
+                "y": {
+                    "min": 4903,
+                    "max": 5027
+                }
+            }
+        },
+        {
+            "name": "Shorewood Canopy",
+            "description": "Where the land meets the churning waves of the southwest coast, a verdant barrier rises. The Shorewood Canopy is a forest defined by its towering trees, many of which have adapted to the salty air and coastal winds, their branches forming a dense canopy overhead. The air here is often filled with the cries of seabirds that nest amongst the higher boughs, and the undergrowth is a mix of hardy shrubs and salt-tolerant plants, providing shelter for a variety of coastal creatures.",
+            "area": {
+                "x": {
+                    "min": 3222,
+                    "max": 3358
+                },
+                "y": {
+                    "min": 3709,
+                    "max": 3783
+                }
+            }
+        },
+        {
+            "name": "Springbrook Woods",
+            "description": "A gentle murmur of flowing water permeates the air within this tranquil forest. The Springbrook Woods are named for the numerous small springs and brooks that crisscross the area, feeding a rich and diverse ecosystem. Lush ferns and mosses carpet the forest floor, and the trees are often draped with climbing vines. The sounds of songbirds and the occasional splash of a fish in a clear stream create a peaceful and idyllic atmosphere.",
+            "area": {
+                "x": {
+                    "min": 3099,
+                    "max": 3338
+                },
+                "y": {
+                    "min": 3942,
+                    "max": 3995
+                }
+            }
+        },
+        {
+            "name": "Willowbrook Copse",
+            "description": "Following the meandering paths of several small streams, a collection of elegant trees dominates this corner of the forest. The Willowbrook Copse is characterized by its abundance of willow trees, their slender branches often dipping down to touch the water's surface. The air here is often cool and damp, and the soft rustling of willow leaves in the breeze creates a soothing soundscape. This area is a haven for water-loving creatures, from amphibians to various types of waterfowl.",
+            "area": {
+                "x": {
+                    "min": 3667,
+                    "max": 3911
+                },
+                "y": {
+                    "min": 3864,
+                    "max": 3921
+                }
+            }
+        },
+        {
+            "name": "Oakheart Enclave",
+            "description": "Standing as silent sentinels of time, massive oak trees form the heart of this ancient forest. The Oakheart Enclave exudes an aura of strength and longevity, with many of its trees boasting thick, gnarled trunks and expansive canopies that filter the sunlight into dappled patterns on the forest floor. The undergrowth is relatively sparse, allowing for easier passage, and the forest is home to creatures that thrive in mature woodland environments, such as deer, squirrels, and various species of birds of prey.",
+            "area": {
+                "x": {
+                    "min": 3684,
+                    "max": 3899
+                },
+                "y": {
+                    "min": 3555,
+                    "max": 3634
+                }
+            }
+        },
+        {
+            "name": "Lavender",
+            "description": "A palpable sense of sorrow hangs in the air where the village of Lavender once stood. Now, only the crumbling foundations of homes and overgrown paths remain, a silent testament to a tragedy that struck without warning. The once vibrant fields that surrounded the village are now wild and untended, and a lingering air of mystery surrounds the calamity that reduced this happy settlement to ruins in a single, devastating night.",
+            "area": {
+                "x": {
+                    "min": 3446,
+                    "max": 3557
+                },
+                "y": {
+                    "min": 3127,
+                    "max": 3207
+                }
+            }
+        },
+        {
+            "name": "Dragonfire Woods",
+            "description": "A palpable sense of dread hangs over these shadowed woods. The Dragonfire Woods are now a dangerous and volatile place, their once familiar paths now patrolled by creatures of legend. The sudden influx of various types of dragons and their kin has transformed the forest into a perilous territory, forcing other wildlife to flee and leaving behind an atmosphere thick with the scent of smoke and fear.",
+            "area": {
+                "x": {
+                    "min": 3443,
+                    "max": 3714
+                },
+                "y": {
+                    "min": 2936,
+                    "max": 3002
+                }
+            }
+        },
+        {
+            "name": "Emberreach Ruins",
+            "description": "Scars of a fiery destruction mark the landscape where the once-proud city of Emberreach stood. Now, only blackened stones and crumbling walls remain, a stark reminder of the dragonfire that consumed it. Nature has begun to reclaim some sections, with hardy vines and tenacious trees growing amongst the ruins, whispering tales of the city's demise and the different accounts of what triggered the dragon's wrath.",
+            "area": {
+                "x": {
+                    "min": 3518,
+                    "max": 3672
+                },
+                "y": {
+                    "min": 2833,
+                    "max": 2930
+                }
+            }
+        },
+        {
+            "name": "Drakenwatch Forest",
+            "description": "Paradoxically, the emergence of danger in the nearby woods has brought a new kind of activity to this forest. Drakenwatch Forest has become a haven for creatures fleeing the terror of the Dragonfire Woods, seeking refuge within its familiar boundaries. However, this influx of wildlife has not gone unnoticed by the local hunters, who now frequent these woods in greater numbers, turning the forest into a busy, albeit somewhat anxious, hunting ground.",
+            "area": {
+                "x": {
+                    "min": 3149,
+                    "max": 3219
+                },
+                "y": {
+                    "min": 2602,
+                    "max": 2887
+                }
+            }
+        },
+        {
+            "name": "Oxpids Basin",
+            "description": "Nestled within a gentle depression in the landscape, the Oxpids Basin is a low-lying area characterized by marshy ground and several small, interconnected pools of water. Patches of tall reeds and water-loving grasses provide ample grazing for herds of wild oxen and other similar creatures that thrive in this damp environment. The air is often filled with the sounds of their lowing and the croaking of frogs.",
+            "area": {
+                "x": {
+                    "min": 3371,
+                    "max": 3533
+                },
+                "y": {
+                    "min": 2678,
+                    "max": 2746
+                }
+            }
+        },
+        {
+            "name": "Sickleflow Strait",
+            "description": "Curving like its namesake farming tool, the Sickleflow Strait is a vital waterway that connects various inland water sources. Fed by numerous streams and rivers, its waters flow in two distinct directions. To the east, it empties into the expansive Circlet Basin, while to the west, it continues its journey towards the vastness of the Imperial Sea, its sickle shape a prominent feature on local maps.",
+            "area": {
+                "x": {
+                    "min": 3810,
+                    "max": 3967
+                },
+                "y": {
+                    "min": 2949,
+                    "max": 3032
+                }
+            }
+        },
+        {
+            "name": "Sickleflow Strait",
+            "description": "Curving like its namesake farming tool, the Sickleflow Strait is a vital waterway that connects various inland water sources. Fed by numerous streams and rivers, its waters flow in two distinct directions. To the east, it empties into the expansive Circlet Basin, while to the west, it continues its journey towards the vastness of the Imperial Sea, its sickle shape a prominent feature on local maps.",
+            "area": {
+                "x": {
+                    "min": 4053,
+                    "max": 4189
+                },
+                "y": {
+                    "min": 3597,
+                    "max": 3711
+                }
+            }
+        },
+        {
+            "name": "Evergreen Woods",
+            "description": "A constant emerald hue defines this unique forest, where the trees retain their vibrant foliage throughout the changing seasons. The Evergreen Woods are primarily composed of various species of coniferous trees, their needles releasing a crisp, invigorating scent into the air. Sunlight filters through their dense branches, casting long shadows on the mossy forest floor, creating a tranquil and timeless atmosphere that feels untouched by the passage of the year.",
+            "area": {
+                "x": {
+                    "min": 3853,
+                    "max": 4001
+                },
+                "y": {
+                    "min": 3057,
+                    "max": 3133
+                }
+            }
+        },
+        {
+            "name": "Sunflower Glade",
+            "description": "Perched atop a series of gently rolling hills, a breathtaking vista of golden blooms awaits. The Sunflower Glade is a vast, open area carpeted with countless sunflowers, their bright yellow faces turned towards the sun. During the summer months, the glade is a vibrant spectacle of color, attracting bees and other pollinators in droves, and offering a cheerful and picturesque respite for travelers.",
+            "area": {
+                "x": {
+                    "min": 3965,
+                    "max": 4181
+                },
+                "y": {
+                    "min": 3191,
+                    "max": 3251
+                }
+            }
+        },
+        {
+            "name": "Groterel Lake",
+            "description": "High in the hills, a pristine body of water shimmers under the sky. Groterel Lake is a remarkably round lake, its clear waters reflecting the surrounding landscape. From its elevated position, the lake feeds two impressive waterfalls, their cascading waters creating a constant roar. One of these waterfalls flows down to join the Sickleflow Stream, making the lake a vital source for the region's waterways. The lake itself is rich in fish and offers stunning panoramic views of the surrounding hills.",
+            "area": {
+                "x": {
+                    "min": 4138,
+                    "max": 4249
+                },
+                "y": {
+                    "min": 3281,
+                    "max": 3360
+                }
+            }
+        },
+        {
+            "name": "Royal Road",
+            "description": "A testament to the engineering prowess of the Westmarch Empire, the Royal Road stretches like a stone ribbon across the land. This wide, well-maintained cobblestone highway begins at the bustling docks of Port Royal and continues, almost in a straight line, all the way to the magnificent Red City. The only major landmark along its impressive length is the imposing Scarlet Gate, a vital checkpoint and a sight to behold for all who travel this essential artery of the empire.",
+            "area": {
+                "x": {
+                    "min": 3965,
+                    "max": 4075
+                },
+                "y": {
+                    "min": 2913,
+                    "max": 2992
+                }
+            }
+        },
+        {
+            "name": "Royal Road",
+            "description": "A testament to the engineering prowess of the Westmarch Empire, the Royal Road stretches like a stone ribbon across the land. This wide, well-maintained cobblestone highway begins at the bustling docks of Port Royal and continues, almost in a straight line, all the way to the magnificent Red City. The only major landmark along its impressive length is the imposing Scarlet Gate, a vital checkpoint and a sight to behold for all who travel this essential artery of the empire.",
+            "area": {
+                "x": {
+                    "min": 3530,
+                    "max": 3674
+                },
+                "y": {
+                    "min": 2516,
+                    "max": 2595
+                }
+            }
+        },
+        {
+            "name": "Dewdrop Thicket",
+            "description": "Hugging both sides of the Royal Road as it winds south and east of Port Royal, the Dewdrop Thicket presents a curious blend of woodland environments. Despite being considered a single entity, travelers will notice distinct shifts in the flora and fauna as they pass through. One section might be dominated by towering pines, their needles catching the morning dew, while another gives way to a more open forest of broadleaf trees, their leaves dappled with sunlight. This unusual amalgamation has led to its single, if somewhat perplexing, name.",
+            "area": {
+                "x": {
+                    "min": 3350,
+                    "max": 3604
+                },
+                "y": {
+                    "min": 2435,
+                    "max": 2501
+                }
+            }
+        },
+        {
+            "name": "Brentrood Lagoon",
+            "description": "Tucked away near the mouth of a slow-moving river as it empties into the western sea, Brentrood Lagoon is a sprawling expanse of brackish water surrounded by dense reeds and tall grasses. The air here is thick with the calls of various waterfowl, and the muddy banks are often dotted with the tracks of wading birds and small mammals. A distinctive type of broad-leafed water lily, known locally as the Brentroot, blooms across the lagoon's surface, adding a touch of vibrant color to the otherwise muted landscape.",
+            "area": {
+                "x": {
+                    "min": 3716,
+                    "max": 3887
+                },
+                "y": {
+                    "min": 2371,
+                    "max": 2473
+                }
+            }
+        },
+        {
+            "name": "Seabreeze Canopy",
+            "description": "Where the northwestern forests meet the crashing waves of the ocean, the Seabreeze Canopy thrives. This coastal woodland is characterized by trees that have grown accustomed to the strong, salty winds, often exhibiting a distinctive lean away from the sea. The air is filled with the scent of pine and the tang of salt, and the forest floor is littered with seashells and smooth, wave-worn stones. The sounds of crashing waves and the cries of gulls are constant companions for anyone venturing within its shaded depths.",
+            "area": {
+                "x": {
+                    "min": 3826,
+                    "max": 4063
+                },
+                "y": {
+                    "min": 2248,
+                    "max": 2318
+                }
+            }
+        },
+        {
+            "name": "Wyrmwind Road",
+            "description": "Travelers along this winding route often share tales of fleeting shadows in the sky and the occasional glimpse of scaled wings disappearing amongst the hills. Wyrmwind Road, as it is known, has earned its name from the persistent rumors of small dragons and drakes that supposedly inhabit the surrounding crags and peaks. While full-grown dragons are rarely, if ever, seen, the possibility of encountering their smaller kin adds a certain thrill, and perhaps a touch of caution, to any journey along this path.",
+            "area": {
+                "x": {
+                    "min": 3228,
+                    "max": 3289
+                },
+                "y": {
+                    "min": 2640,
+                    "max": 2837
+                }
+            }
+        },
+        {
+            "name": "Chalis Loch",
+            "description": "A large and serene body of water nestled amongst rolling hills, Chalis Loch serves as a vital lifeline for the surrounding settlements. To the north, its clear waters flow into the heart of Hearthglen, providing the metropolis with drinking water and powering its mills. To the southwest, a smaller river meanders down towards Vermillion, sustaining the town's famous red flower fields and the dye works that depend on them, making the loch a crucial resource for the region.",
+            "area": {
+                "x": {
+                    "min": 3314,
+                    "max": 3439
+                },
+                "y": {
+                    "min": 3251,
+                    "max": 3343
+                }
+            }
+        },
+        {
+            "name": "Redstream Route",
+            "description": "Cutting through the heart of Westmarch, the Redstream Route offers a direct path from the formidable fortress of Tantegel to the grandeur of the Red City. The cobblestone road winds its way through varied terrain, eventually crossing the Sickleflow Stream via a sturdy bridge. For much of its journey, the watchful gaze of Ruby Gate, perched high upon a mountain to the northwest, serves as a constant reminder of the Empire's strength and vigilance.",
+            "area": {
+                "x": {
+                    "min": 3758,
+                    "max": 3929
+                },
+                "y": {
+                    "min": 3654,
+                    "max": 3735
+                }
+            }
+        },
+        {
+            "name": "Redstream Route",
+            "description": "Cutting through the heart of Westmarch, the Redstream Route offers a direct path from the formidable fortress of Tantegel to the grandeur of the Red City. The cobblestone road winds its way through varied terrain, eventually crossing the Sickleflow Stream via a sturdy bridge. For much of its journey, the watchful gaze of Ruby Gate, perched high upon a mountain to the northwest, serves as a constant reminder of the Empire's strength and vigilance.",
+            "area": {
+                "x": {
+                    "min": 4359,
+                    "max": 4499
+                },
+                "y": {
+                    "min": 3419,
+                    "max": 3526
+                }
+            }
+        },
+        {
+            "name": "Flintwater Basin",
+            "description": "Lying directly west of the sprawling metropolis of Nosgoth, the Flintwater Basin is a low-lying area characterized by a network of shallow, interconnected pools and streams. The water here has a distinctive clarity, revealing a bed of smooth, dark stones that resemble flint, giving the basin its name. Sparse vegetation, adapted to the damp conditions, surrounds the waterways, and the area is known to be a habitat for various types of amphibians and wading birds.",
+            "area": {
+                "x": {
+                    "min": 4173,
+                    "max": 4302
+                },
+                "y": {
+                    "min": 2459,
+                    "max": 2519
+                }
+            }
+        },
+        {
+            "name": "Pebblefall Lake",
+            "description": "A picturesque body of water nestled amongst rocky hills, Pebblefall Lake is known for a unique natural phenomenon. At its northeastern end, a massive rock formation, riddled with small crevices, conceals a powerful waterfall driven by strong underwater currents. As the water rushes down, it carries countless small pebbles with it, which then tumble and cascade over the rocky ledges, creating a constant, gentle rain of tiny stones and a series of naturally occurring, melodic tunes that echo around the lake.",
+            "area": {
+                "x": {
+                    "min": 3946,
+                    "max": 4140
+                },
+                "y": {
+                    "min": 2740,
+                    "max": 2815
+                }
+            }
+        },
+        {
+            "name": "The Pillars",
+            "description": "Standing as silent sentinels against the skyline of Nosgoth, nine colossal pillars of an unknown, dark stone rise from the earth. Arranged in a wide circle, their surfaces are etched with intricate carvings that seem to shift and writhe in the changing light. At the very heart of this sacred space lies a massive fountain, its sculpted basin overflowing with water that shimmers with an inner luminescence. This site is the very soul of Nosgoth, a place of profound cultural and religious significance, drawing pilgrims and the devout from across the region.",
+            "area": {
+                "x": {
+                    "min": 4440,
+                    "max": 4552
+                },
+                "y": {
+                    "min": 2302,
+                    "max": 2393
+                }
+            }
+        },
+        {
+            "name": "Sunny Path",
+            "description": "Winding its way through gently sloping hills, the Sunny Path lives up to its name. This well-trodden trail seems to perpetually bask in sunlight, even on days when clouds obscure the rest of the sky. The air here is often warm and filled with the buzzing of bees attracted to the wildflowers that bloom in abundance along its edges. It's a pleasant and inviting route, favored by leisurely travelers and those seeking a moment of tranquility.",
+            "area": {
+                "x": {
+                    "min": 4365,
+                    "max": 4429
+                },
+                "y": {
+                    "min": 2625,
+                    "max": 2748
+                }
+            }
+        },
+        {
+            "name": "Sunny Path",
+            "description": "Winding its way through gently sloping hills, the Sunny Path lives up to its name. This well-trodden trail seems to perpetually bask in sunlight, even on days when clouds obscure the rest of the sky. The air here is often warm and filled with the buzzing of bees attracted to the wildflowers that bloom in abundance along its edges. It's a pleasant and inviting route, favored by leisurely travelers and those seeking a moment of tranquility.",
+            "area": {
+                "x": {
+                    "min": 4359,
+                    "max": 4434
+                },
+                "y": {
+                    "min": 2942,
+                    "max": 3048
+                }
+            }
+        },
+        {
+            "name": "Eldoria Fall",
+            "description": "Now a somber collection of charred ruins and overgrown foundations, Eldoria Fall was once a prosperous city, renowned for the rich veins of ore that lay beneath the surrounding forests. Tragically, it was here that the seeds of the Nemesis' rebellion were sown, and it was the first major target of his wrath. The city was razed to the ground, a devastating blow to the Empire and a grim symbol of the conflict that now tears Westmarch apart.",
+            "area": {
+                "x": {
+                    "min": 4449,
+                    "max": 4537
+                },
+                "y": {
+                    "min": 2708,
+                    "max": 2789
+                }
+            }
+        },
+        {
+            "name": "Sunbeam Groove",
+            "description": "Enveloping the Sunny Path like a protective embrace, the Sunbeam Groove is a small, sheltered woodland where sunlight filters through the leaves in bright, dancing shafts. The trees here are spaced in such a way that the path below is almost always illuminated, creating a warm and inviting atmosphere. Unique, sun-loving flora thrives within the groove, their leaves often shimmering with a golden hue, and the air is filled with the gentle sounds of rustling leaves and birdsong.",
+            "area": {
+                "x": {
+                    "min": 4273,
+                    "max": 4500
+                },
+                "y": {
+                    "min": 2788,
+                    "max": 2834
+                }
+            }
+        },
+        {
+            "name": "Whisperwind Thicket",
+            "description": "A sense of unease settles upon those who venture into the shadowy depths of the Whisperwind Thicket. The gnarled and twisted trees seem to claw at the sky, and the air often carries a faint, chilling breeze, even on still days. Looming ominously to the north, the decaying grandeur of Draynor Manor casts a long shadow over the thicket, fueling local tales of a restless ghoul said to haunt both the mansion and the surrounding woods.",
+            "area": {
+                "x": {
+                    "min": 4234,
+                    "max": 4501
+                },
+                "y": {
+                    "min": 3554,
+                    "max": 3588
+                }
+            }
+        },
+        {
+            "name": "Bayleaf Woods",
+            "description": "Nestled within a sheltered bay on the southwest coast of Westmarch, where one of the branches of the Sickleflow Stream finally meets the ocean, lies the Bayleaf Woods. The air here is fragrant with the scent of bay laurel trees, which grow in abundance alongside other coastal vegetation. The gentle lapping of waves against the shore and the rustling of bay leaves in the sea breeze create a tranquil and aromatic environment.",
+            "area": {
+                "x": {
+                    "min": 4145,
+                    "max": 4326
+                },
+                "y": {
+                    "min": 3951,
+                    "max": 3991
+                }
+            }
+        },
+        {
+            "name": "Draynor Manor",
+            "description": "Perched atop a foreboding hill, Draynor Manor stands as a grim testament to the wickedness that once resided within its walls. This ominous mansion, built by the cruel Lord Draynor, is rumored to be his final resting place, his treasure buried alongside his remains deep within its shadowed depths. Ever since his demise, a malevolent ghoul is said to haunt its decaying halls, and the chilling tales warn that no one who dares to cross its threshold has ever returned to tell the tale, leaving the manor's secrets and its hidden riches undisturbed.",
+            "area": {
+                "x": {
+                    "min": 4254,
+                    "max": 4432
+                },
+                "y": {
+                    "min": 3608,
+                    "max": 3677
+                }
+            }
+        },
+        {
+            "name": "Glowpeak Grove",
+            "description": "Clinging to the slopes of the same imposing mountain that hosts Draynor Manor, though on its southwestern side, lies the Glowpeak Grove. This peculiar woodland, situated east of the Sickleflow Stream and northwest of Bayleaf Woods, is known for a soft, ethereal luminescence that permeates the air, especially during twilight hours. The leaves of its unique trees seem to absorb and gently release the day's light, casting a subtle, otherworldly glow amongst the undergrowth, creating an enchanting yet slightly unsettling atmosphere.",
+            "area": {
+                "x": {
+                    "min": 4248,
+                    "max": 4372
+                },
+                "y": {
+                    "min": 3745,
+                    "max": 3823
+                }
+            }
+        },
+        {
+            "name": "Doview Lake",
+            "description": "Southwest of the ominous presence of Draynor Manor and west of the bustling city of Barleybrook lies the expansive Doview Lake. Its waters are renowned for their exceptional purity, making it a vital resource for Barleybrook's ever-expanding farmlands, supporting both crops and livestock. A peculiar sight graces its western shore: the weathered hull of an old galleon rests just at the water's edge, near a forgotten path that once led towards Draynor Manor. Its presence remains an enigma, a silent question mark on the otherwise tranquil landscape.",
+            "area": {
+                "x": {
+                    "min": 4463,
+                    "max": 4616
+                },
+                "y": {
+                    "min": 3740,
+                    "max": 3784
+                }
+            }
+        },
+        {
+            "name": "Stoneharrow Quarry",
+            "description": "Nestled deep within a formidable ring of mountains and jagged rock formations, the Stoneharrow Quarry is a gaping maw in the earth, a testament to Westmarch's insatiable need for stone and minerals. This vast excavation delves far into the mountainside, its depths echoing with the sounds of pickaxes and rumbling carts. Since the onset of the Nemesis' rebellion, its importance has skyrocketed, as the Empire relies heavily on its output to compensate for the resources lost in the now enemy-controlled territories.",
+            "area": {
+                "x": {
+                    "min": 4682,
+                    "max": 4831
+                },
+                "y": {
+                    "min": 3579,
+                    "max": 3680
+                }
+            }
+        },
+        {
+            "name": "Turquoise Gorge",
+            "description": "Hidden within a formidable embrace of towering rock walls, the Turquoise Gorge is a breathtaking spectacle of natural beauty. Completely enclosed save for its southern end, the gorge is defined by a series of magnificent waterfalls that cascade down the sheer cliffs, their waters a vibrant turquoise hue. The sight and sound of the water plummeting into the depths below create a mesmerizing and awe-inspiring scene.",
+            "area": {
+                "x": {
+                    "min": 4923,
+                    "max": 5059
+                },
+                "y": {
+                    "min": 3690,
+                    "max": 3766
+                }
+            }
+        },
+        {
+            "name": "Imperial Woods",
+            "description": "Stretching south of the Red City, across the expanse of the Circlet Basin, lie three vast forests collectively known as the Imperial Woods. For generations, these woodlands have served as the exclusive hunting grounds for Westmarch's royalty and nobility, their depths teeming with game. However, this privilege has also attracted a persistent problem: bands of poachers who risk the Empire's wrath in pursuit of valuable game and resources.",
+            "area": {
+                "x": {
+                    "min": 4690,
+                    "max": 4927
+                },
+                "y": {
+                    "min": 3417,
+                    "max": 3475
+                }
+            }
+        },
+        {
+            "name": "Cardinal Way",
+            "description": "The lifeblood of the Empire flows along the Cardinal Way, a major cobblestone road that connects the fertile lands around Barleybrook and Agria directly to the heart of the Red City. This bustling artery is constantly filled with carts laden with food, resources, and trade goods, its importance underscored by the presence of the massive Crimson Gate, its primary stop along the route. The road is exclusively guarded by the Crimson Brotherhood, an elite order dedicated to ensuring the uninterrupted flow of commerce, and the gate's garrison is notably larger than that of the other Imperial gates.",
+            "area": {
+                "x": {
+                    "min": 4929,
+                    "max": 5000
+                },
+                "y": {
+                    "min": 3367,
+                    "max": 3450
+                }
+            }
+        },
+        {
+            "name": "Cardinal Way",
+            "description": "The lifeblood of the Empire flows along the Cardinal Way, a major cobblestone road that connects the fertile lands around Barleybrook and Agria directly to the heart of the Red City. This bustling artery is constantly filled with carts laden with food, resources, and trade goods, its importance underscored by the presence of the massive Crimson Gate, its primary stop along the route. The road is exclusively guarded by the Crimson Brotherhood, an elite order dedicated to ensuring the uninterrupted flow of commerce, and the gate's garrison is notably larger than that of the other Imperial gates.",
+            "area": {
+                "x": {
+                    "min": 5159,
+                    "max": 5224
+                },
+                "y": {
+                    "min": 3624,
+                    "max": 3735
+                }
+            }
+        },
+        {
+            "name": "Firefly Forest",
+            "description": "Spanning a truly immense area, the Firefly Forest is a contender for the title of the largest single forest in all of Haven, a claim rivaled only by the legendary Lothlórien. Regardless of its exact ranking, its sheer scale is breathtaking. Ancient trees, their trunks thicker than any cart, tower towards the sky, their branches interwoven to create a perpetual twilight on the forest floor. The air hums with the sounds of unseen creatures, and an aura of ancient mystery permeates this awe-inspiring woodland.",
+            "area": {
+                "x": {
+                    "min": 4608,
+                    "max": 4800
+                },
+                "y": {
+                    "min": 4054,
+                    "max": 4097
+                }
+            }
+        },
+        {
+            "name": "Vermillion Lake",
+            "description": "Fed by the rushing waters of the Crimson Rapids as they spill out from the Circlet Basin, Vermillion Lake is a significant source of freshwater for the surrounding region, particularly the town of Springfield. Situated on its shores stands the largest watermill in the Empire, its massive wheel constantly turning, powered by the lake's abundant waters, grinding grain for the settlements nearby.",
+            "area": {
+                "x": {
+                    "min": 5235,
+                    "max": 5348
+                },
+                "y": {
+                    "min": 3572,
+                    "max": 3649
+                }
+            }
+        },
+        {
+            "name": "Verdant Trail",
+            "description": "Winding its way across the landscape, the Verdant Trail is a well-worn dirt path that serves as a vital connection between several key settlements. It begins in the agricultural heartland of Agria, then meanders through the forests surrounding Springfield, continues towards the bustling port city of Grainport, and finally culminates in the majestic elven metropolis of Aerendil, facilitating trade and travel across this significant stretch of Westmarch.",
+            "area": {
+                "x": {
+                    "min": 5437,
+                    "max": 5479
+                },
+                "y": {
+                    "min": 3890,
+                    "max": 4006
+                }
+            }
+        },
+        {
+            "name": "Verdant Trail",
+            "description": "Winding its way across the landscape, the Verdant Trail is a well-worn dirt path that serves as a vital connection between several key settlements. It begins in the agricultural heartland of Agria, then meanders through the forests surrounding Springfield, continues towards the bustling port city of Grainport, and finally culminates in the majestic elven metropolis of Aerendil, facilitating trade and travel across this significant stretch of Westmarch.",
+            "area": {
+                "x": {
+                    "min": 5503,
+                    "max": 5538
+                },
+                "y": {
+                    "min": 3462,
+                    "max": 3574
+                }
+            }
+        },
+        {
+            "name": "Verdant Trail",
+            "description": "Winding its way across the landscape, the Verdant Trail is a well-worn dirt path that serves as a vital connection between several key settlements. It begins in the agricultural heartland of Agria, then meanders through the forests surrounding Springfield, continues towards the bustling port city of Grainport, and finally culminates in the majestic elven metropolis of Aerendil, facilitating trade and travel across this significant stretch of Westmarch.",
+            "area": {
+                "x": {
+                    "min": 5546,
+                    "max": 5582
+                },
+                "y": {
+                    "min": 3165,
+                    "max": 3280
+                }
+            }
+        },
+        {
+            "name": "Wheatwood Forest",
+            "description": "A gentle rustling sound often precedes any visual confirmation of this unusual forest. The Wheatwood Forest is characterized by the presence of tall, slender trees interspersed with vast fields of a unique, wheat-like grass that grows far taller than any cultivated grain. These towering stalks sway in the breeze, creating a sea of golden waves that stretches as far as the eye can see, providing both cover and a distinctive whispering sound that gives the forest its name.",
+            "area": {
+                "x": {
+                    "min": 5318,
+                    "max": 5595
+                },
+                "y": {
+                    "min": 3832,
+                    "max": 3873
+                }
+            }
+        },
+        {
+            "name": "Crimson Rapids",
+            "description": "Churning and frothing as they surge forth from the Circlet Basin, the Crimson Rapids are a sight to behold. The water here possesses a distinct reddish hue, likely due to the mineral-rich earth through which it flows, giving the rapids their fiery name. The current is strong and relentless, carving its path through the landscape with considerable force as it rushes towards Vermillion Lake, its powerful flow a testament to the raw energy of nature.",
+            "area": {
+                "x": {
+                    "min": 4980,
+                    "max": 5089
+                },
+                "y": {
+                    "min": 3303,
+                    "max": 3367
+                }
+            }
+        },
+        {
+            "name": "Faelorin",
+            "description": "South of the elegant spires of Aerendil lies the serene elven region of Faelorin. Here, ancient forests of towering trees, their branches interwoven with an almost artistic precision, blanket the landscape. The air is often filled with the gentle melodies of unseen birds and the soft rustling of leaves. Elven settlements within Faelorin tend to blend seamlessly with their natural surroundings, their architecture often incorporating living trees and flowing water, creating an atmosphere of tranquility and timeless beauty.",
+            "area": {
+                "x": {
+                    "min": 5483,
+                    "max": 5613
+                },
+                "y": {
+                    "min": 3327,
+                    "max": 3367
+                }
+            }
+        },
+        {
+            "name": "Earalond",
+            "description": "Stretching between the elegant elven city of Aerendil to the east and the enchanting town of Galadrim to the west, lies the vast and tranquil Lake Earalond. Some whisper that its very existence is a testament to elven magic and artistry. The region exudes a peaceful beauty, its calm waters reflecting the surrounding forests and hills, making it a favored destination for fishermen from across Haven, despite the elves' fiercely protective nature towards it. A magnificent elven bridge, adorned with intricate carvings, spans the lake, with graceful waterfalls cascading down both its eastern and western ends, adding to the lake's ethereal charm.",
+            "area": {
+                "x": {
+                    "min": 5224,
+                    "max": 5347
+                },
+                "y": {
+                    "min": 3067,
+                    "max": 3121
+                }
+            }
+        },
+        {
+            "name": "Celebros",
+            "description": "South of the majestic city of Aerendil, across the shimmering expanse of Lake Earalond, lies the smaller but equally beautiful Lake Celebros. This serene body of water is particularly known for being the recipient of the waters that cascade from the southeastern side of the famed elven bridge of Earalond, often referred to as the \"bridge of diamonds\" due to the way sunlight catches its intricate structure. The gentle flow of these waterfalls contributes to the peaceful ambiance of Lake Celebros.",
+            "area": {
+                "x": {
+                    "min": 5404,
+                    "max": 5505
+                },
+                "y": {
+                    "min": 3225,
+                    "max": 3280
+                }
+            }
+        },
+        {
+            "name": "Lothlórien",
+            "description": "A forest of legendary proportions, Lothlórien stands as a testament to the ancient and untamed heart of Westmarch. Its sheer size is staggering, sparking endless debate as to whether it surpasses even the vast Firefly Forest in its extent. Regardless of the comparison, Lothlórien is undeniably awe-inspiring, its towering trees forming a dense canopy that filters the sunlight into dappled patterns on the mossy ground below. An air of ancient wisdom and profound magic permeates this timeless woodland.",
+            "area": {
+                "x": {
+                    "min": 5348,
+                    "max": 5504
+                },
+                "y": {
+                    "min": 2847,
+                    "max": 2905
+                }
+            }
+        },
+        {
+            "name": "Aerlithil",
+            "description": "South of the elven town of Galadrim lies the carefully cultivated region of Aerlithil. The elves tend to this land with a gentle hand, ensuring its natural beauty remains untouched. Strategically, Aerlithil holds significant importance as the shortest route between the elven settlements and the bustling Red City. Recognizing this, the Empire has constructed a fortified gate along the river that marks its border, a responsibility that falls under the jurisdiction of the distant Garnet Gate. It is said that the soldiers stationed at this outpost often find their duty tedious, as the peaceful nature of the elves and the distance from Garnet Gate make for a rather uneventful posting.",
+            "area": {
+                "x": {
+                    "min": 4979,
+                    "max": 5116
+                },
+                "y": {
+                    "min": 3162,
+                    "max": 3206
+                }
+            }
+        },
+        {
+            "name": "High Road",
+            "description": "True to its name, the High Road begins its journey and continues on a steady, almost imperceptible incline, gradually ascending as it winds its way across the landscape. This well-maintained path serves as a vital connection between the elegant elven city of Aerendil and the seemingly impenetrable metropolis of Sistervale, offering travelers a scenic, though consistently uphill, route between the two distinct settlements.",
+            "area": {
+                "x": {
+                    "min": 5236,
+                    "max": 5361
+                },
+                "y": {
+                    "min": 2879,
+                    "max": 2920
+                }
+            }
+        },
+        {
+            "name": "High Road",
+            "description": "True to its name, the High Road begins its journey and continues on a steady, almost imperceptible incline, gradually ascending as it winds its way across the landscape. This well-maintained path serves as a vital connection between the elegant elven city of Aerendil and the seemingly impenetrable metropolis of Sistervale, offering travelers a scenic, though consistently uphill, route between the two distinct settlements.",
+            "area": {
+                "x": {
+                    "min": 4947,
+                    "max": 5065
+                },
+                "y": {
+                    "min": 2724,
+                    "max": 2801
+                }
+            }
+        },
+        {
+            "name": "Lóthlinn Carnil",
+            "description": "Known by the elves as Lóthlinn Carnil, a name whispered to mean something akin to \"Flower-like Red Star\" or \"Blossoming Red Star,\" this location holds a certain mystique. Despite the evocative nature of its elven designation, the reason behind the name has been lost to time, yet it has persisted through the ages. Among the common folk, it is more simply known as Lóthlinn, a name that rolls easily off the tongue, regardless of its enigmatic origins.",
+            "area": {
+                "x": {
+                    "min": 5171,
+                    "max": 5332
+                },
+                "y": {
+                    "min": 3217,
+                    "max": 3270
+                }
+            }
+        },
+        {
+            "name": "The Scorchlands",
+            "description": "Once a vibrant forest teeming with life and small settlements, the Scorchlands now bear the scars of the Nemesis' rebellion. A desolate expanse of blackened earth, choked with ash and punctuated by lingering fires, it is a grim testament to the brutal conflict that has swept through the region.",
+            "area": {
+                "x": {
+                    "min": 5652,
+                    "max": 6104
+                },
+                "y": {
+                    "min": 2738,
+                    "max": 3045
+                }
+            }
+        },
+        {
+            "name": "Serpent Rapids",
+            "description": "Massive rapids that stretch from the far east in the city of Thurakmar, all the way to the Red City midway across the continent. The name comes from the fact the rapids have several slim curves and fast currents that resemble a snake.",
+            "area": {
+                "x": {
+                    "min": 5285,
+                    "max": 5494
+                },
+                "y": {
+                    "min": 2753,
+                    "max": 2797
+                }
+            }
+        },
+        {
+            "name": "Tranquil Glade",
+            "description": "Located on the shores of the Serpent Rapids, south east of Sistervale. Despite its proximity to the powerful currents, this glade is a pocket of profound stillness. Sunlight filters through the dense canopy, dappling the mossy ground where the only sound is the gentle lapping of water against the shore, offering a welcome respite from the surrounding world.",
+            "area": {
+                "x": {
+                    "min": 5158,
+                    "max": 5339
+                },
+                "y": {
+                    "min": 2704,
+                    "max": 2745
+                }
+            }
+        },
+        {
+            "name": "Sister's Reach",
+            "description": "This cobblestone road runs from Sistervale to the Red City. It makes a large stop by the Garnet Gate, and passes right in front of it.",
+            "area": {
+                "x": {
+                    "min": 4955,
+                    "max": 5009
+                },
+                "y": {
+                    "min": 2847,
+                    "max": 2929
+                }
+            }
+        },
+        {
+            "name": "Valerian Spire",
+            "description": "The Valerian Spire stands tall at the top of a small, highly elevated cliff, towering over Sistervale, Nosgoth and Lower Red City. Its elegant design, crafted from a shimmering white stone, catches the sunlight, making it visible for miles. From its height, a Seer of great wisdom observes the ebb and flow of life in Westmarch, offering guidance to those who seek it.",
+            "area": {
+                "x": {
+                    "min": 4659,
+                    "max": 4780
+                },
+                "y": {
+                    "min": 2622,
+                    "max": 2721
+                }
+            }
+        },
+        {
+            "name": "Silverstream Strait",
+            "description": "The strait flows from the Red City directly to the ocean. It is the only naval route directly from the Imperial Capital's harbours towards the great ocean. It is conveniently named for its silvery colour. And the great amounts of silver that flows through it in ships, of course.",
+            "area": {
+                "x": {
+                    "min": 4566,
+                    "max": 4646
+                },
+                "y": {
+                    "min": 2476,
+                    "max": 2653
+                }
+            }
+        },
+        {
+            "name": "Serenity Basin",
+            "description": "Largest body of fresh water inside Westmarch. Truly a marvel of nature. It is frequently confused with the ocean itself. Its crystal-clear waters stretch to the horizon, reflecting the vast sky above. Gentle breezes ripple across its surface, creating a sense of boundless peace and tranquility that soothes the soul.",
+            "area": {
+                "x": {
+                    "min": 5143,
+                    "max": 5343
+                },
+                "y": {
+                    "min": 2408,
+                    "max": 2492
+                }
+            }
+        },
+        {
+            "name": "Dreadstone",
+            "description": "The focal point of Dreadhold, the western fortress, is an architectural marvel of impregnable stone walls, iron gates, and countless watchtowers. It houses the administrative offices, high-security cells, and barracks for the guards.",
+            "area": {
+                "x": {
+                    "min": 6410,
+                    "max": 6600
+                },
+                "y": {
+                    "min": 3753,
+                    "max": 3876
+                }
+            }
+        },
+        {
+            "name": "Murkhold",
+            "description": "The eastern fortress, while smaller, is equipped with numerous defences suited to its muddy surroundings. It has high walls reinforced with magic to prevent erosion and to detect any escape attempts.",
+            "area": {
+                "x": {
+                    "min": 6757,
+                    "max": 6917
+                },
+                "y": {
+                    "min": 3879,
+                    "max": 3981
+                }
+            }
+        },
+        {
+            "name": "Silver Abyss",
+            "description": "Located in the rocky western biome, Silver Abyss is a labyrinth of narrow tunnels and precarious shafts carved deep into the mountains. Prisoners toil under dim torchlight, extracting precious silver ore from the veins that run through the ancient rock. The air is thick with dust and the constant sound of pickaxes striking stone.",
+            "area": {
+                "x": {
+                    "min": 6391,
+                    "max": 6565
+                },
+                "y": {
+                    "min": 3892,
+                    "max": 4013
+                }
+            }
+        },
+        {
+            "name": "Ironclad Gulch",
+            "description": "In the muddy eastern biome, Ironclad Gulch is a quagmire of thick, sucking mud and stagnant water. Prisoners slog through knee-deep muck, their progress slowed by the treacherous terrain. The iron-rich earth yields bog iron, which is extracted with backbreaking labour using simple tools. The constant threat of flooding adds to the danger, as prisoners must work quickly to avoid being trapped by rising waters.",
+            "area": {
+                "x": {
+                    "min": 6642,
+                    "max": 6842
+                },
+                "y": {
+                    "min": 3733,
+                    "max": 3858
+                }
+            }
         }
     ],
     "Cloud Sprites": [
@@ -1287,6 +2646,32 @@
                 "y": {
                     "min": 4800,
                     "max": 5700
+                }
+            }
+        },
+        {
+            "sound path": "pence_island_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 3300,
+                    "max": 3900
+                },
+                "y": {
+                    "min": 4000,
+                    "max": 5000
+                }
+            }
+        },
+        {
+            "sound path": "dreadhold_theme.mp3",
+            "area": {
+                "x": {
+                    "min": 6125,
+                    "max": 7184
+                },
+                "y": {
+                    "min": 3479,
+                    "max": 4315
                 }
             }
         }
