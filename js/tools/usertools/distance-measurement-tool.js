@@ -1,3 +1,4 @@
+import { createAndPlayAudio } from '../../audio/sound-system.js';
 import { CANVAS_MAP, MAP_SCALE } from '../../config/config-manager.js';
 import { currentWallpaperMatrix, redrawCanvas } from '../../rendering/canvas-manager.js';
 import { createInteractiveMapTooltip } from '../../ui/ui-manager.js';
@@ -13,8 +14,32 @@ let tooltipName = null;
 let tooltipDesc = null;
 let isVisible = false;
 
-// Cache transformed coordinates
+// Caches
 let cachedPoints = [];
+let lastMousePosition = { x: 0, y: 0 };
+let animationFrameId = null;
+
+const getNaturalCoordinates = (eventOrPosition) => {
+	let mousePos;
+	if (eventOrPosition instanceof Event) {
+		mousePos = getRelativeCoordinates(eventOrPosition, CANVAS_MAP);
+	} else {
+		mousePos = eventOrPosition;
+	}
+
+	const point = new DOMPoint(mousePos.x, mousePos.y);
+	return currentWallpaperMatrix.inverse().transformPoint(point);
+};
+
+const getRelativeCoordinatesFromDOM = (position) => {
+	return {
+		x: position.x,
+		y: position.y,
+		// Add fractional scaling compensation if needed
+		_x: position.x * window.devicePixelRatio,
+		_y: position.y * window.devicePixelRatio
+	};
+};
 
 const drawMeasurement = function (ctx) {
 	if (!isEnabled || !ctx) return;
@@ -25,7 +50,7 @@ const drawMeasurement = function (ctx) {
 	// Draw connection lines
 	if (cachedPoints.length > 1) {
 		ctx.beginPath();
-		ctx.strokeStyle = 'rgba(230, 33, 33, 0.8)';
+		ctx.strokeStyle = 'rgba(125, 33, 230, 0.8)';
 		ctx.lineWidth = 4;
 
 		cachedPoints.forEach((p, i) => {
@@ -36,6 +61,22 @@ const drawMeasurement = function (ctx) {
 			}
 		});
 
+		ctx.stroke();
+	}
+
+	// Draw a preview line from the last point to the mouse position
+	if (cachedPoints.length > 0) {
+		// Get mouse position in natural coordinates using stored position
+		const mousePos = getRelativeCoordinatesFromDOM(lastMousePosition);
+		const naturalPos = getNaturalCoordinates(mousePos);
+		const lastPoint = cachedPoints[cachedPoints.length - 1];
+
+		ctx.beginPath();
+		ctx.moveTo(lastPoint.x, lastPoint.y);
+		ctx.lineTo(naturalPos.x, naturalPos.y);
+
+		ctx.strokeStyle = 'rgba(53, 33, 230, 0.7)';
+		ctx.lineWidth = 4;
 		ctx.stroke();
 	}
 
@@ -67,18 +108,13 @@ window.addEventListener('overlaysUpdated', (event) => {
 	drawMeasurement(ctxOverlays);
 });
 
-const getNaturalCoordinates = (event) => {
-	const mousePos = getRelativeCoordinates(event, CANVAS_MAP);
-	const point = new DOMPoint(mousePos.x, mousePos.y);
-	return currentWallpaperMatrix.inverse().transformPoint(point);
-};
-
 const handleMouseDown = (event) => {
 	if (event.button === 0) {
 		// Left click
 		const naturalPos = getNaturalCoordinates(event);
 		points.push(naturalPos);
 		updateCachedPoints();
+		createAndPlayAudio("effects/button_tap_1.mp3", 0.1, true);
 	}
 	else if (event.button === 2) {
 		// Right click
@@ -102,6 +138,17 @@ const calculateRealDistance = (pointA, pointB) => {
 const handleMouseMove = (event) => {
 	if (!tooltip) return;
 
+	// Store mouse position for drawing
+	const rect = CANVAS_MAP.getBoundingClientRect();
+	lastMousePosition.x = event.clientX - rect.left;
+	lastMousePosition.y = event.clientY - rect.top;
+
+	// Cancel any pending frame and request new animation frame
+	if (animationFrameId) cancelAnimationFrame(animationFrameId);
+	animationFrameId = requestAnimationFrame(() => {
+		redrawCanvas();
+	});
+
 	const naturalPos = getNaturalCoordinates(event);
 	let totalDistance = 0;
 	let segmentDistance = 0;
@@ -123,12 +170,11 @@ const handleMouseMove = (event) => {
 	tooltipDesc.textContent += `Current: ${segmentDistance.toFixed(1)} ${MAP_SCALE.distanceUnit}`;
 
 	// Position tooltip relative to canvas
-	const rect = CANVAS_MAP.getBoundingClientRect();
 	const xOffset = 15 * window.devicePixelRatio;
 	const yOffset = 15 * window.devicePixelRatio;
 
-	tooltip.style.left = `${event.clientX - rect.left + xOffset}px`;
-	tooltip.style.top = `${event.clientY - rect.top + yOffset}px`;
+	tooltip.style.left = `${lastMousePosition.x + xOffset}px`;
+	tooltip.style.top = `${lastMousePosition.y + yOffset}px`;
 
 	if (!isVisible) {
 		tooltip.classList.add('visible');
